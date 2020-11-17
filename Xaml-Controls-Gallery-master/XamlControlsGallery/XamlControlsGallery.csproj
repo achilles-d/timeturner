@@ -109,19 +109,32 @@
       <Link>Properties\Default.rd.xml</Link>
     </Content>
     <Content Include="Assets\activities.png" />
+    <Content Include="Assets\activities_blue.png" />
+    <Content Include="Assets\activities_color_dodge.png" />
+    <Content Include="Assets\activities_highlighted.png" />
     <Content Include="Assets\add_calendar.png" />
+    <Content Include="Assets\add_calendar_blue.png" />
     <Content Include="Assets\calendar.png" />
+    <Content Include="Assets\calendar_blue.png" />
     <Content Include="Assets\calibration.png" />
+    <Content Include="Assets\calibration_blue.png" />
     <Content Include="Assets\data.png" />
+    <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar.png" />
+    <Content Include="Assets\delete_calendar_blue.png" />
     <Content Include="Assets\device.png" />
+    <Content Include="Assets\device_blue.png" />
     <Content Include="Assets\device_sounds.png" />
     <Content Include="Assets\device_sounds_blue.png" />
     <Content Include="Assets\insights.png" />
+    <Content Include="Assets\insights_blue.png" />
     <Content Include="Assets\LottieLogo1.png" />
     <Content Include="Assets\notifications.png" />
+    <Content Include="Assets\notifications_blue.png" />
     <Content Include="Assets\NumberBox.png" />
     <Content Include="Assets\RadioButtons.png" />
+    <Content Include="Assets\reports_blue.png" />
+    <Content Include="Assets\rotation_sounds_blue.png" />
     <Content Include="Assets\SampleMedia\cliff.jpg" />
     <Content Include="Assets\SampleMedia\fishes.wmv" />
     <Content Include="Assets\SampleMedia\grapes.jpg" />
@@ -177,9 +190,11 @@
     <Content Include="Assets\Reveal.png" />
     <Content Include="Assets\RevealFocus.png" />
     <Content Include="Assets\settings.png" />
+    <Content Include="Assets\settings_blue.png" />
     <Content Include="Assets\Sound.png" />
     <Content Include="Assets\SplitButton.png" />
     <Content Include="Assets\status.png" />
+    <Content Include="Assets\status_blue.png" />
     <Content Include="Assets\StoryboardAnimation.png" />
     <Content Include="Assets\SunBlack.png" />
     <Content Include="Assets\SunWhite.png" />
@@ -245,6 +260,7 @@
     <Content Include="Assets\TreeView.png" />
     <Content Include="Assets\updated.png" />
     <Content Include="Assets\view_calendar.png" />
+    <Content Include="Assets\view_calendar_blue.png" />
     <Content Include="Assets\WebView.png" />
     <Content Include="ControlPagesSampleCode\Brushes\RadialGradientBrushSample_xaml.txt" />
     <Content Include="ControlPagesSampleCode\Buttons\Button\CustomButtonStyle.txt" />

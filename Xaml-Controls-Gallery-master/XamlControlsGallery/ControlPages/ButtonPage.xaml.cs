@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -19,25 +19,19 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Example2_Loaded(object sender, RoutedEventArgs e)
         {
-            if (sender is Button b)
-            {
-                string name = b.Name;
 
-                switch (name)
-                {
-                    case "Button1":
-                        Control1Output.Text = "You clicked: " + name;
-                        break;
-                    case "Button2":
-                        Control2Output.Text = "You clicked: " + name;
-                        break;
-                    case "Button3":
-                        Control3Output.Text = "You clicked: " + name;
-                        break;
-                }
-            }
+        }
+
+        private void Example1_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

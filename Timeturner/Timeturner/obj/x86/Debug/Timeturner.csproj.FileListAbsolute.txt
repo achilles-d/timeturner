@@ -88,3 +88,9 @@ E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\qualifiers.txt.i
 E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\ProjectArchitectures.txt
 E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637112750540000000.json
+E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\DeviceSounds.g.i.cs
+E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\DeviceSounds.g.cs
+E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\DeviceSounds.xaml
+E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\DeviceSounds.xbf
+E:\Documents\HCC\timeturner\Timeturner\Timeturner\bin\x86\Debug\DeviceSounds.xbf
+E:\Documents\HCC\timeturner\Timeturner\Timeturner\obj\x86\Debug\Microsoft.UI.Xaml.pri.xml
