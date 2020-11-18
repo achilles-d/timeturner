@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,6 +20,16 @@ namespace AppUIBasics.ControlPages
         public DropDownButtonPage()
         {
             this.InitializeComponent();
+        }
+
+        private void ControlExample_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

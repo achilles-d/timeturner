@@ -31,26 +31,7 @@
           "ImagePath": "ms-appx:///Assets/notifications_blue.png",
           "Description": "A control that drops down a flyout of choices from which one can be chosen.",
           "Content": "",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "DropDownButton - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.dropdownbutton"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
-            }
-          ],
-          "RelatedControls": [
-            "SplitButton",
-            "ToggleSplitButton",
-            "ToggleButton",
-            "RepeatButton",
-            "HyperlinkButton",
-            "AppBarButton",
-            "CommandBar"
-          ]
+          "IsNew": false
         },
         {
           "UniqueId": "HyperlinkButton",
