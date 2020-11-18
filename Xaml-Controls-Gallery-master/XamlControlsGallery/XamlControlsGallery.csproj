@@ -114,6 +114,8 @@
     <Content Include="Assets\activities_highlighted.png" />
     <Content Include="Assets\add_calendar.png" />
     <Content Include="Assets\add_calendar_blue.png" />
+    <Content Include="Assets\battery_blue.png" />
+    <Content Include="Assets\bluetooth_blue.png" />
     <Content Include="Assets\break_scheduled_blue.png" />
     <Content Include="Assets\calendar.png" />
     <Content Include="Assets\calendar_blue.png" />
@@ -195,6 +197,7 @@
     <Content Include="Assets\RevealFocus.png" />
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\settings_blue.png" />
+    <Content Include="Assets\signal_blue.png" />
     <Content Include="Assets\Sound.png" />
     <Content Include="Assets\speaker_pitch_blue.png" />
     <Content Include="Assets\speaker_volume_blue.png" />
@@ -209,6 +212,7 @@
     <Content Include="Assets\TabViewIcons\linux.png" />
     <Content Include="Assets\TabViewIcons\powershell.png" />
     <Content Include="Assets\TeachingTip.png" />
+    <Content Include="Assets\team9_emblem.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-100.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-125.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-150.png" />

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -39,6 +39,11 @@ namespace AppUIBasics.ControlPages
             {
                 DialogResult.Text = "User cancelled the dialog";
             }
+        }
+
+        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

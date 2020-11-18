@@ -150,23 +150,7 @@
           "ImagePath": "ms-appx:///Assets/status_blue.png",
           "Description": "Use a ContentDialog to show relavant information or to provide a modal dialog experience that can show any XAML content.",
           "Content": "<p>Look at the <i>ContentDialog.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "ContentDialog - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentdialog"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/dialogs"
-            }
-          ],
-          "RelatedControls": [
-            "Flyout",
-            "MenuFlyout",
-            "TeachingTip",
-            "ToolTip"
-          ]
+          "IsNew": false
         },
         {
           "UniqueId": "Flyout",
