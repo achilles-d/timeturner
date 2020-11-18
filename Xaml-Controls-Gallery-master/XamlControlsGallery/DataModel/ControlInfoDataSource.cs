@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -44,8 +44,8 @@ namespace AppUIBasics.Data
             this.IsNew = isNew;
             this.IsUpdated = isUpdated;
             this.IsPreview = isPreview;
-            this.Docs = new ObservableCollection<ControlInfoDocLink>();
-            this.RelatedControls = new ObservableCollection<string>();
+            //this.Docs = new ObservableCollection<ControlInfoDocLink>();
+            //this.RelatedControls = new ObservableCollection<string>();
         }
 
         public string UniqueId { get; private set; }
@@ -58,8 +58,8 @@ namespace AppUIBasics.Data
         public bool IsNew { get; private set; }
         public bool IsUpdated { get; private set; }
         public bool IsPreview { get; private set; }
-        public ObservableCollection<ControlInfoDocLink> Docs { get; private set; }
-        public ObservableCollection<string> RelatedControls { get; private set; }
+        //public ObservableCollection<ControlInfoDocLink> Docs { get; private set; }
+        //public ObservableCollection<string> RelatedControls { get; private set; }
 
         public override string ToString()
         {
@@ -239,7 +239,7 @@ namespace AppUIBasics.Data
                                                                 isNew,
                                                                 isUpdated,
                                                                 isPreview);
-
+                        /*
                         if (itemObject.ContainsKey("Docs"))
                         {
                             foreach (JsonValue docValue in itemObject["Docs"].GetArray())
@@ -256,7 +256,7 @@ namespace AppUIBasics.Data
                                 item.RelatedControls.Add(relatedControlValue.GetString());
                             }
                         }
-
+                        */
                         group.Items.Add(item);
                     }
 

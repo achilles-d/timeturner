@@ -22,23 +22,7 @@
           "ImagePath": "ms-appx:///Assets/device_sounds_blue.png",
           "Description": "The Button control provides a Click event to respond to user input from a touch, mouse, keyboard, stylus, or other input device. You can put different kinds of content in a button, such as text or an image, or you can restyle a button to give it a new look.",
           "Content": "<p>The main purpose of a <b>Button</b> is to make something happen when a user clicks it. There are two ways you can make something happen:</p><ul><li>Handle the <b>Click</b> event.</li><li>Bind the <b>Command</b> property to an ICommand implementation that describes the command logic.</li></ul><p>Buttons often have only simple string content, but you can use any object as content. You can also change the style and template to give them any look you want.</p><p>Look at the <i>ButtonPage.xaml</i> file in Visual Studio to see the custom button style and template definitions used on this page.</p>",
-          "IsUpdated": true,
-          "Docs": [
-            {
-              "Title": "Button - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
-            }
-          ],
-          "RelatedControls": [
-            "ToggleButton",
-            "RepeatButton",
-            "HyperlinkButton",
-            "AppBarButton"
-          ]
+          "IsUpdated": true
         },
         {
           "UniqueId": "DropDownButton",

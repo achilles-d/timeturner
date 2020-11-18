@@ -192,6 +192,8 @@
     <Content Include="Assets\settings.png" />
     <Content Include="Assets\settings_blue.png" />
     <Content Include="Assets\Sound.png" />
+    <Content Include="Assets\speaker_pitch_blue.png" />
+    <Content Include="Assets\speaker_volume_blue.png" />
     <Content Include="Assets\SplitButton.png" />
     <Content Include="Assets\status.png" />
     <Content Include="Assets\status_blue.png" />
