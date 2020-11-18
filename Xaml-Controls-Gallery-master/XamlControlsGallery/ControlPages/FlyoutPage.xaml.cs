@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -21,12 +21,9 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private void DeleteConfirmation_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (this.Control1.Flyout is Flyout f)
-            {
-                f.Hide();
-            }
+
         }
     }
 }

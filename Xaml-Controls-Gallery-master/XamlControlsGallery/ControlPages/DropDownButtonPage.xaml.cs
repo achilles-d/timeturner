@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Notifications;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace AppUIBasics.ControlPages
 {
@@ -29,6 +31,20 @@ namespace AppUIBasics.ControlPages
 
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var breakNotificationContent = new ToastContentBuilder()
+            .AddText("Break Scheduled", hintMaxLines: 1)
+            .AddText("Monday, Novemeber 23")
+            .AddText("10:00 AM - 10:30 AM")
+            .GetToastContent();
+
+            var breakNotification = new ToastNotification(breakNotificationContent.GetXml());
+
+            ToastNotificationManager.CreateToastNotifier().Show(breakNotification);
 
         }
     }

@@ -27,5 +27,9 @@
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="ms-appx:///Assets/device_charging_blue.png"/>
             <ToggleSwitch Header="Device Charging" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Toggled="ToggleSwitch_Toggled"/>
         </StackPanel>
+        <!-- For demonstrative purposes only -->
+        <StackPanel Orientation="Horizontal" Width="452" Height="157">
+            <Button Content="Schedule Break" FontSize="40" Width="453" Click="Button_Click"/>
+        </StackPanel>
     </StackPanel>
 </Page>

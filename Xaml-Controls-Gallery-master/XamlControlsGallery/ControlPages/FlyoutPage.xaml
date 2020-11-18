@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 //*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
@@ -13,42 +13,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:AppUIBasics"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
-    <Page.Resources>
-        <Flyout x:Key="SharedFlyout">
-            <StackPanel>
-                <TextBlock Text="This Flyout is shared." />
+    <StackPanel>
+        <Button HorizontalAlignment="Center" Click="Button_Click" Height="167" Margin="0,200,0,0">
+            <StackPanel Orientation="Horizontal" Width="507" Spacing="20">
+                <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Source="ms-appx:///Assets/calibrate_gyroscope_blue.png"/>
+                <TextBlock Text="Calibrate Gyroscope" FontSize="40" Height="51" VerticalAlignment="Center"/>
             </StackPanel>
-        </Flyout>
-    </Page.Resources>
-    <StackPanel HorizontalAlignment="Left">
-        <local:ControlExample HeaderText="A button with a flyout">
-            <local:ControlExample.Example>
-                <Button x:Name="Control1" Content="Empty cart">
-                    <Button.Flyout>
-                        <Flyout>
-                            <StackPanel>
-                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"
-                                        Text="All items will be removed. Do you want to continue?" Margin="0,0,0,12" />
-                                <Button Click="DeleteConfirmation_Click" Content="Yes, empty my cart" />
-                            </StackPanel>
-                        </Flyout>
-                    </Button.Flyout>
-                </Button>
-            </local:ControlExample.Example>
-            <local:ControlExample.Xaml>
-                <x:String xml:space="preserve">
-&lt;Button Content="Empty cart"&gt;
-    &lt;Button.Flyout&gt;
-        &lt;Flyout&gt;
-            &lt;StackPanel&gt;
-                &lt;TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="All items will be removed. Do you want to continue?" Margin="0,0,0,12" /&gt;
-                &lt;Button Click="DeleteConfirmation_Click" Content="Yes, empty my cart" /&gt;
-            &lt;/StackPanel&gt;
-        &lt;/Flyout&gt;
-    &lt;/Button.Flyout&gt;
-&lt;/Button&gt;
-                </x:String>
-            </local:ControlExample.Xaml>
-        </local:ControlExample>
+        </Button>
+
     </StackPanel>
 </Page>

@@ -34,7 +34,7 @@ namespace AppUIBasics
     /// </summary>
     sealed partial class App : Application
     {
-        
+
         /// <summary>
         /// Initializes the singleton Application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
