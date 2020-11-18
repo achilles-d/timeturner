@@ -8,8 +8,35 @@
     mc:Ignorable="d">
     <StackPanel>
         <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
-            <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="0a617f53-f445-4c88-98b0-ee0ab93bd5d2"/>
-            <ToggleSwitch Header="Calendar Events" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Toggled="ToggleSwitch_Toggled"/>
+            <Image Source="ms-appx:///Assets/activities_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="Homework" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Current Activity" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <Image Source="ms-appx:///Assets/battery_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="40%" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Discharging" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <!-- <StackPanel Orientation="Horizontal" Spacing="0" Height="119" Width="186"> -->
+                <Image Source="ms-appx:///Assets/bluetooth_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <!-- <Image Source="ms-appx:///Assets/signal_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/> -->
+            <!-- </StackPanel> -->
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="Bluetooth" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Connected to Alex-PC" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <Image Source="ms-appx:///Assets/team9_emblem.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="Firmware Version" TextWrapping="Wrap" FontSize="40" Width="326" Height="61" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="1.0.0" TextWrapping="Wrap" FontSize="26" Width="324" Height="61" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
         </StackPanel>
 
     </StackPanel>

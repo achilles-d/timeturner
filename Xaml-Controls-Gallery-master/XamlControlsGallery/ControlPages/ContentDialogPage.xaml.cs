@@ -26,7 +26,7 @@ namespace AppUIBasics.ControlPages
         {
             ContentDialogExample dialog = new ContentDialogExample();
             var result = await dialog.ShowAsync();
-
+            /*
             if (result == ContentDialogResult.Primary)
             {
                 DialogResult.Text = "User saved their work";
@@ -39,9 +39,15 @@ namespace AppUIBasics.ControlPages
             {
                 DialogResult.Text = "User cancelled the dialog";
             }
+            */
         }
 
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
