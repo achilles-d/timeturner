@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -19,9 +19,14 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private void GoToHyperlinkButton_Click(object sender, RoutedEventArgs e)
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            NavigationRootPage.RootFrame.Navigate(typeof(ItemPage), "ToggleButton");
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

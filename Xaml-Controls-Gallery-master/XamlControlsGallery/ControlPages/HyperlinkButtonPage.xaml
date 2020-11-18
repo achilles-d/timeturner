@@ -1,14 +1,3 @@
-﻿<!--
-//*********************************************************
-//
-// Copyright (c) Microsoft. All rights reserved.
-// THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
-// ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
-// IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
-// PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
-//
-//*********************************************************
--->
 <Page
     x:Class="AppUIBasics.ControlPages.HyperlinkButtonPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -19,35 +8,59 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <local:ControlExample x:Name="Example1" HeaderText="A hyperlink button that navigates to a URI.">
-            <local:ControlExample.Example>
-                <HyperlinkButton x:Name="Control1" Content="Microsoft home page" NavigateUri="http://www.microsoft.com" IsEnabled="{x:Bind DisableControl1.IsChecked.Value.Equals(x:False), Mode=OneWay}" />
-            </local:ControlExample.Example>
-            <local:ControlExample.Options>
-                <StackPanel>
-                    <CheckBox x:Name="DisableControl1" Content="Disable hyperlink button" />
-                </StackPanel>
-            </local:ControlExample.Options>
-            <local:ControlExample.Xaml>
-                <x:String>
-                    &lt;HyperlinkButton Content="Microsoft home page" NavigateUri="http://www.microsoft.com" $(IsEnabled)/&gt;
-                </x:String>
-            </local:ControlExample.Xaml>
-            <local:ControlExample.Substitutions>
-                <local:ControlExampleSubstitution Key="IsEnabled" IsEnabled="{x:Bind DisableControl1.IsChecked.Value, Mode=OneWay}"
-                                                  Value= "IsEnabled=&quot;False&quot; "/>
-            </local:ControlExample.Substitutions>
-        </local:ControlExample>
-
-        <local:ControlExample HeaderText="A hyperlink button that handles a Click event.">
-            <local:ControlExample.Example>
-                <HyperlinkButton x:Name="Control2" Content="Go to ToggleButton" Click="GoToHyperlinkButton_Click" />
-            </local:ControlExample.Example>
-            <local:ControlExample.Xaml>
-                <x:String>
-                    &lt;HyperlinkButton Content="ToggleButton" Click="HyperlinkButton_Click"/&gt;
-                </x:String>
-            </local:ControlExample.Xaml>
-        </local:ControlExample>
+        <StackPanel Orientation="Horizontal" Width="800" Height="63" >
+            <TextBlock Text="Edit the activities assigned to each face of the device." FontSize="30" TextWrapping="NoWrap" Width="730" VerticalAlignment="Bottom" SelectionChanged="TextBlock_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="1" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="2" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="3" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="4" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="5" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="6" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="7" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="8" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="9" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="10" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="11" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+            <TextBlock Text="12" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="Auto" Height="138" HorizontalAlignment="Center">
+            <Button Content="Save" FontSize="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
     </StackPanel>
 </Page>

@@ -11,19 +11,19 @@
       mc:Ignorable="d">
     
     <StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="178" Spacing="20">
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="ms-appx:///Assets/calendar_events_blue.png"/>
             <ToggleSwitch Header="Calendar Events" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Toggled="ToggleSwitch_Toggled"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="152" Spacing="20">
+        <StackPanel Orientation="Horizontal" Width="452" Height="158" Spacing="20">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="ms-appx:///Assets/break_scheduled_blue.png"/>
             <ToggleSwitch Header="Break Scheduled" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Toggled="ToggleSwitch_Toggled"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="168" Spacing="20">
+        <StackPanel Orientation="Horizontal" Width="452" Height="145" Spacing="20">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="ms-appx:///Assets/device_battery_low_blue.png"/>
-            <ToggleSwitch Header="Device Battery Low" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Center" Toggled="ToggleSwitch_Toggled"/>
+            <ToggleSwitch Header="Device Battery Low" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Toggled="ToggleSwitch_Toggled"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="163" Spacing="20">
+        <StackPanel Orientation="Horizontal" Width="452" Height="157" Spacing="20">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="ms-appx:///Assets/device_charging_blue.png"/>
             <ToggleSwitch Header="Device Charging" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Toggled="ToggleSwitch_Toggled"/>
         </StackPanel>
