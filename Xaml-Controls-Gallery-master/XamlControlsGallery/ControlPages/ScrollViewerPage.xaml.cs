@@ -16,7 +16,17 @@ namespace AppUIBasics.ControlPages
 {
     public sealed partial class ScrollViewerPage : Page
     {
+        public ScrollViewerPage()
+        {
+            this.InitializeComponent();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }

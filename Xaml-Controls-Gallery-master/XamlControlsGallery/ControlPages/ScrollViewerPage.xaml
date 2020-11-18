@@ -23,6 +23,6 @@
                 <TextBlock FontSize="20"><Run/><LineBreak/><Run Text="Download Weekly Data"/></TextBlock>
             </StackPanel>
         </Button>
-        <TextBlock Height="137" Text="Hello" FontSize="50" TextWrapping="Wrap" Width="217"/>
+        <TextBlock Height="137" Text="Hello" FontSize="50" TextWrapping="Wrap" Width="217" SelectionChanged="TextBlock_SelectionChanged"/>
     </StackPanel>
 </Page>
