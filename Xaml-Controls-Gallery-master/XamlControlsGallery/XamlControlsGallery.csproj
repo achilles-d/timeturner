@@ -122,10 +122,12 @@
     <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar.png" />
     <Content Include="Assets\delete_calendar_blue.png" />
+    <Content Include="Assets\Delete_report.png" />
     <Content Include="Assets\device.png" />
     <Content Include="Assets\device_blue.png" />
     <Content Include="Assets\device_sounds.png" />
     <Content Include="Assets\device_sounds_blue.png" />
+    <Content Include="Assets\Download_weekely_data.png" />
     <Content Include="Assets\insights_blue.png" />
     <Content Include="Assets\Insights_graph.png" />
     <Content Include="Assets\LottieLogo1.png" />
@@ -198,6 +200,7 @@
     <Content Include="Assets\status.png" />
     <Content Include="Assets\status_blue.png" />
     <Content Include="Assets\StoryboardAnimation.png" />
+    <Content Include="Assets\Summary_report.png" />
     <Content Include="Assets\SunBlack.png" />
     <Content Include="Assets\SunWhite.png" />
     <Content Include="Assets\Swipe.png" />

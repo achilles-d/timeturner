@@ -43,7 +43,7 @@
             <StackPanel Orientation="Vertical" Width="452" Height="303">
             <TextBlock Height="84" Text=" Summary" HorizontalAlignment="Left" TextWrapping="Wrap" Width="272" FontSize="60"/>
             <StackPanel Orientation="Horizontal" Height="192" Width="448">
-                <Image Height="108" VerticalAlignment="Center" Margin="0,0,0,0" Width="132" Source="ms-appx:///Assets/reports_blue.png"/>
+                <Image Height="108" VerticalAlignment="Center" Margin="0,0,0,0" Width="132" Source="ms-appx:///Assets/Summary_report.png"/>
                 <TextBlock Height="136" VerticalAlignment="Center" Text="{Binding Textdata}" TextWrapping="Wrap" Width="264" FontSize="23"/>
             </StackPanel>
         </StackPanel>
@@ -52,7 +52,7 @@
             <StackPanel Orientation="Vertical" Width="452" Height="303" Margin="0,20,0,0">
                 <TextBlock Height="84" Text="Delete" HorizontalAlignment="Left" TextWrapping="Wrap" Width="272" FontSize="60" SelectionChanged="TextBlock_SelectionChanged_1"/>
                 <StackPanel Orientation="Horizontal" Height="192" Width="448">
-                    <Image Height="108" VerticalAlignment="Center" Margin="0,-30,0,0" Width="132" Source="ms-appx:///Assets/reports_blue.png"/>
+                    <Image Height="108" VerticalAlignment="Center" Margin="0,-30,0,0" Width="132" Source="ms-appx:///Assets/Delete_report.png" RenderTransformOrigin="0.591,0.5"/>
                     <StackPanel Height="180" Width="308" Orientation="Vertical">
                         <TextBlock Height="76" HorizontalAlignment="Left" TextWrapping="Wrap" Width="264" FontSize="35"><Run Text="Clear All Data"/><LineBreak/><Run/></TextBlock>
                         <TextBlock Height="80" HorizontalAlignment="Left" Text="This Action Can Not be Undone" TextWrapping="Wrap" Width="308" FontSize="20"/>

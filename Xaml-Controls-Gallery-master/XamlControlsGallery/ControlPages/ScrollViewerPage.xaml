@@ -34,7 +34,7 @@
         <StackPanel Height="115" VerticalAlignment="Center">
             <Button Height="111" Width="407" Click="Button_Click_1" HorizontalAlignment="Left">
                 <StackPanel Width="320" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
-                    <Image Source="ms-appx:///Assets/reports_blue.png"/>
+                    <Image Source="ms-appx:///Assets/Download_weekely_data.png"/>
                     <TextBlock FontSize="21"><Run/><LineBreak/><Run Text="Download Weekly Data"/></TextBlock>
                 </StackPanel>
             </Button>
