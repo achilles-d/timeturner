@@ -7,6 +7,8 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
+using System;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,12 +23,19 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var message = new MessageDialog("Sleep time: \n" +
+                "Weekly stats:13 hours\n" + "Target:50 hours");
+            await message.ShowAsync();
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
         }

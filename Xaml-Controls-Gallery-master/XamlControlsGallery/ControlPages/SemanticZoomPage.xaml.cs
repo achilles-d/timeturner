@@ -8,7 +8,9 @@
 //
 //*********************************************************
 using AppUIBasics.Data;
+using System;
 using System.Collections.Generic;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -18,10 +20,14 @@ namespace AppUIBasics.ControlPages
     public sealed partial class SemanticZoomPage : Page
     {
         private IEnumerable<ControlInfoDataGroup> _groups;
-
+        public class Storage_msg
+        {
+            public string Textdata { get; set; }
+        }
         public SemanticZoomPage()
         {
             this.InitializeComponent();
+            this.DataContext = new Storage_msg() { Textdata = "34.5MB Used on C Drive\nSince 10/20/2020"};
         }
         public IEnumerable<ControlInfoDataGroup> Groups
         {
@@ -38,6 +44,7 @@ namespace AppUIBasics.ControlPages
         private void List_GotFocus(object sender, RoutedEventArgs e)
         {
             //Control1.StartBringIntoView();
+            
         }
 
         private void Example1_Loaded(object sender, RoutedEventArgs e)
@@ -61,6 +68,19 @@ namespace AppUIBasics.ControlPages
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Storage = "No data Saved yet";
+            var message = new MessageDialog("Data Delete Successfully!");
+            await message.ShowAsync();
+            this.DataContext = new Storage_msg() { Textdata = "No data saved yet\nSince 10/20/2020" };
+        }
+
+        private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
         {
 
         }

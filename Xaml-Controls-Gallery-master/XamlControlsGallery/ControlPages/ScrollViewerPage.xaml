@@ -16,13 +16,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:common="using:AppUIBasics.Common"
         xmlns:Custom="using:Microsoft.UI.Xaml.Controls" x:Class="AppUIBasics.ControlPages.ScrollViewerPage"
         mc:Ignorable="d">
-    <StackPanel>
-        <Button Height="111" Width="407" Click="Button_Click">
-            <StackPanel Width="320" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
-                <Image Source="ms-appx:///Assets/reports_blue.png"/>
-                <TextBlock FontSize="20"><Run/><LineBreak/><Run Text="Download Weekly Data"/></TextBlock>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Height="392" Orientation="Vertical">
+            <TextBlock Height="136" TextWrapping="Wrap" Width="248" FontSize="40" HorizontalAlignment="Left"><Run/><LineBreak/><Run Text="  Insights"/></TextBlock>
+            <StackPanel Orientation="Horizontal" Background="Gray" Height="219" Width="876" HorizontalAlignment="Left" Margin="20,0,0,0">
+                <Grid>
+                    <Image Source="ms-appx:///Assets/insights_graph.png"/>
+                    <Button Height="30" Width="30" Margin="20,20,0,0" Background="Transparent" Name="button" Click="Button_Click"/>
+                </Grid>
+                <StackPanel Orientation="Vertical" Height="192" Width="556">
+                    <TextBlock Text="Weekly Report" TextWrapping="Wrap" FontSize="30" HorizontalAlignment="Center"/>
+                    <TextBlock Height="58" FontSize="20" Foreground="LightGreen" TextWrapping="Wrap" Width="556"><Run Text="-sleep increased by 35%"/><LineBreak/><Run Text="-worktime increased by 10%"/></TextBlock>
+                    <TextBlock Height="92" FontSize="20" Foreground="Red" TextWrapping="Wrap"><Run Text="-Suggested breaks taken:12 (30% decline)"/><LineBreak/><Run Text="-Exercise time decreased by 50%"/><LineBreak/><Run Text="-1/6 goals accomplished"/></TextBlock>
+                </StackPanel>
             </StackPanel>
-        </Button>
-        <TextBlock Height="137" Text="Hello" FontSize="50" TextWrapping="Wrap" Width="217" SelectionChanged="TextBlock_SelectionChanged"/>
+        </StackPanel>
+        <StackPanel Height="115" VerticalAlignment="Center">
+            <Button Height="111" Width="407" Click="Button_Click_1" HorizontalAlignment="Left">
+                <StackPanel Width="320" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                    <Image Source="ms-appx:///Assets/reports_blue.png"/>
+                    <TextBlock FontSize="21"><Run/><LineBreak/><Run Text="Download Weekly Data"/></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
     </StackPanel>
 </Page>

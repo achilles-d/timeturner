@@ -126,8 +126,8 @@
     <Content Include="Assets\device_blue.png" />
     <Content Include="Assets\device_sounds.png" />
     <Content Include="Assets\device_sounds_blue.png" />
-    <Content Include="Assets\insights.png" />
     <Content Include="Assets\insights_blue.png" />
+    <Content Include="Assets\Insights_graph.png" />
     <Content Include="Assets\LottieLogo1.png" />
     <Content Include="Assets\notifications.png" />
     <Content Include="Assets\notifications_blue.png" />
