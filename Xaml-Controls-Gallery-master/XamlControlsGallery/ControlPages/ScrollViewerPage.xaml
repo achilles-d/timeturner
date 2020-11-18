@@ -9,13 +9,20 @@
 //
 //*********************************************************
 -->
-<Page x:Class="AppUIBasics.ControlPages.ScrollViewerPage"
+<Page
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="using:AppUIBasics"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:common="using:AppUIBasics.Common"
+        xmlns:Custom="using:Microsoft.UI.Xaml.Controls" x:Class="AppUIBasics.ControlPages.ScrollViewerPage"
         mc:Ignorable="d">
     <StackPanel>
-
+        <Button Height="111" Width="407" Click="Button_Click">
+            <StackPanel Width="320" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
+                <Image Source="ms-appx:///Assets/reports_blue.png"/>
+                <TextBlock FontSize="20"><Run/><LineBreak/><Run Text="Download Weekly Data"/></TextBlock>
+            </StackPanel>
+        </Button>
+        <TextBlock Height="137" Text="Hello" FontSize="50" TextWrapping="Wrap" Width="217"/>
     </StackPanel>
 </Page>
