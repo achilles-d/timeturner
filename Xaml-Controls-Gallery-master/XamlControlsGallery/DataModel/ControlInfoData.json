@@ -229,25 +229,7 @@
           "ImagePath": "ms-appx:///Assets/insights_blue.png",
           "Description": "A ScrollViewer lets a user scroll, pan, and zoom to see content that's larger than the viewable area. Many content controls, like ListView, have ScrollViewers built into their control templates to provide automatic scrolling.",
           "Content": "<p>Look at the <i>ScrollViewerPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "ScrollViewer - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer"
-            },
-            {
-              "Title": "Guidance",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/scroll-controls"
-            }
-          ],
-          "RelatedControls": [
-            "ViewBox",
-            "Canvas",
-            "Grid",
-            "StackPanel",
-            "RelativePanel",
-            "ParallaxView"
-          ]
+          "IsNew": false
         },
         {
           "UniqueId": "SemanticZoom",
@@ -256,21 +238,7 @@
           "ImagePath": "ms-appx:///Assets/data_blue.png",
           "Description": "The SemanticZoom lets you show grouped data in two different ways, and is useful for quickly navigating through large sets of data.",
           "Content": "<p>Look at the <i>SemanticZoomPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "SemanticZoom - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/semantic-zoom"
-            }
-          ],
-          "RelatedControls": [
-            "GridView",
-            "ListView"
-          ]
+          "IsNew": false
         }
       ]
     }
