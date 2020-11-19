@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -24,11 +25,25 @@ using Windows.UI.Xaml.Navigation;
 
 namespace AppUIBasics.ControlPages
 {
-    public sealed partial class CanvasPage : Page
+    public sealed partial class CurrentActivityPage : Page
     {
-        public CanvasPage()
+        public CurrentActivityPage()
         {
             this.InitializeComponent();
+        }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            TextBlock currentActivityTextBlock = this.FindName("CurrentActivityTextBlock") as TextBlock;
+            currentActivityTextBlock.Text = e.Parameter.ToString();
+            await Task.Delay(3000);
+            this.Frame.GoBack();
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

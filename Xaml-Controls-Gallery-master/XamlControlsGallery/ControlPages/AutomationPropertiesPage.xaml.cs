@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -7,7 +7,21 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
 
 namespace AppUIBasics.ControlPages
 {
@@ -21,18 +35,9 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private void FontSizeNumberBox_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            // Ensure that if user clears the NumberBox, we don't pass 0 or null as fontsize
-            if(sender.Value >= sender.Minimum)
-            {
-                FontSizeChangingTextBlock.FontSize = sender.Value;
-            }
-            else
-            {
-                // We fell below minimum, so lets restore a correct value
-                sender.Value = sender.Minimum;
-            }
+
         }
     }
 }
