@@ -114,6 +114,7 @@
     <Content Include="Assets\activities_highlighted.png" />
     <Content Include="Assets\add_calendar.png" />
     <Content Include="Assets\add_calendar_blue.png" />
+    <Content Include="Assets\apple_blue.png" />
     <Content Include="Assets\battery_blue.png" />
     <Content Include="Assets\bluetooth_blue.png" />
     <Content Include="Assets\break_scheduled_blue.png" />
@@ -133,12 +134,14 @@
     <Content Include="Assets\device_charging_blue.png" />
     <Content Include="Assets\device_sounds.png" />
     <Content Include="Assets\device_sounds_blue.png" />
+    <Content Include="Assets\google_blue.png" />
     <Content Include="Assets\insights.png" />
     <Content Include="Assets\insights_blue.png" />
     <Content Include="Assets\LottieLogo1.png" />
     <Content Include="Assets\notifications.png" />
     <Content Include="Assets\notifications_blue.png" />
     <Content Include="Assets\NumberBox.png" />
+    <Content Include="Assets\outlook_blue.png" />
     <Content Include="Assets\RadioButtons.png" />
     <Content Include="Assets\reports_blue.png" />
     <Content Include="Assets\rotation_sounds_blue.png" />
@@ -424,8 +427,8 @@
     <Compile Include="ControlPages\CalendarViewPage.xaml.cs">
       <DependentUpon>CalendarViewPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlPages\CanvasPage.xaml.cs">
-      <DependentUpon>CanvasPage.xaml</DependentUpon>
+    <Compile Include="ControlPages\CurrentActivityPage.xaml.cs">
+      <DependentUpon>CurrentActivityPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ControlPages\CheckBoxPage.xaml.cs">
       <DependentUpon>CheckBoxPage.xaml</DependentUpon>
@@ -903,7 +906,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ControlPages\CanvasPage.xaml">
+    <Page Include="ControlPages\CurrentActivityPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1265,6 +1268,9 @@
     <SDKReference Include="WindowsDesktop, Version=10.0.18362.0">
       <Name>Windows Desktop Extensions for the UWP</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
