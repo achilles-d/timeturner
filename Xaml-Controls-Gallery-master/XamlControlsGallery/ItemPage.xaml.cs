@@ -27,6 +27,8 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using System.Reflection;
 using AppUIBasics.Helper;
+using System;
+using System.Threading;
 
 namespace AppUIBasics
 {
@@ -209,6 +211,18 @@ namespace AppUIBasics
             }
 
             VisualStateManager.GoToState(this, targetState, false);
+        }
+
+        private void DisplayActivityChange(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Number1)
+            {
+                this.Frame.Navigate(typeof(ControlPages.CurrentActivityPage), "Homework");
+            }
+            else if (e.Key == Windows.System.VirtualKey.Number2)
+            {
+                this.Frame.Navigate(typeof(ControlPages.CurrentActivityPage), "Tennis");
+            }
         }
     }
 }
