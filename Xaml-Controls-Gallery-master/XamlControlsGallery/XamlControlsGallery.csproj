@@ -118,6 +118,9 @@
     <Content Include="Assets\calendar_blue.png" />
     <Content Include="Assets\calibration.png" />
     <Content Include="Assets\calibration_blue.png" />
+    <Content Include="Assets\Cal_delete_blue.png" />
+    <Content Include="Assets\Cal_export_blue.png" />
+    <Content Include="Assets\Cal_summary_blue.png" />
     <Content Include="Assets\data.png" />
     <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar.png" />

@@ -41,7 +41,7 @@ namespace AppUIBasics.ControlPages
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.Threading.Thread.Sleep(100);
-            var message = new MessageDialog("Calander export successfully!");
+            var message = new MessageDialog("Calander download successfully!");
             await message.ShowAsync();
             StorageFolder localfolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             using (WebClient wc = new WebClient())

@@ -17,8 +17,8 @@
         xmlns:Custom="using:Microsoft.UI.Xaml.Controls" x:Class="AppUIBasics.ControlPages.ScrollViewerPage"
         mc:Ignorable="d">
     <StackPanel Orientation="Vertical">
-        <StackPanel Height="392" Orientation="Vertical">
-            <TextBlock Height="136" TextWrapping="Wrap" Width="248" FontSize="40" HorizontalAlignment="Left"><Run/><LineBreak/><Run Text="  Insights"/></TextBlock>
+        <StackPanel Height="328" Orientation="Vertical">
+            <TextBlock Height="72" TextWrapping="Wrap" Width="248" FontSize="40" HorizontalAlignment="Left" Text=" Insights"/>
             <StackPanel Orientation="Horizontal" Background="Gray" Height="219" Width="876" HorizontalAlignment="Left" Margin="20,0,0,0">
                 <Grid>
                     <Image Source="ms-appx:///Assets/insights_graph.png"/>
@@ -32,9 +32,9 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Height="115" VerticalAlignment="Center">
-            <Button Height="111" Width="407" Click="Button_Click_1" HorizontalAlignment="Left" Margin="19,0,0,0">
+            <Button Height="80" Width="407" Click="Button_Click_1" HorizontalAlignment="Left" Margin="19,0,0,0">
                 <StackPanel Width="320" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,3">
-                    <Image Source="ms-appx:///Assets/Download_weekely_data.png"/>
+                    <Image Source="ms-appx:///Assets/Cal_export_blue.png"/>
                     <TextBlock FontSize="21"><Run/><LineBreak/><Run Text="Download Weekly Data"/></TextBlock>
                 </StackPanel>
             </Button>
