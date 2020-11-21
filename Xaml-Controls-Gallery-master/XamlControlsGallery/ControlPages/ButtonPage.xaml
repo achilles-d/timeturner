@@ -5,16 +5,15 @@
       xmlns:contract7Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract,7)"
       mc:Ignorable="d">
     <StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="289">
+        <StackPanel Orientation="Horizontal" Width="452" Height="186" Spacing="10">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Bottom" Source="ms-appx:///Assets/speaker_volume_blue.png"/>
             <Slider Width="301" Height="108" Header="Speaker Volume" FontSize="40" VerticalAlignment="Bottom"/>
-
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="247">
+        <StackPanel Orientation="Horizontal" Width="452" Height="247" Spacing="10">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Source="ms-appx:///Assets/speaker_pitch_blue.png"/>
             <Slider Width="301" Height="108" Header="Speaker Pitch" FontSize="40"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="130">
+        <StackPanel Orientation="Horizontal" Width="452" Height="130" Spacing="10">
             <Image Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Source="ms-appx:///Assets/rotation_sounds_blue.png"/>
             <ToggleSwitch Header="Rotation Sounds" FontSize="40" HorizontalAlignment="Right" VerticalAlignment="Top" Toggled="ToggleSwitch_Toggled"/>
         </StackPanel>
