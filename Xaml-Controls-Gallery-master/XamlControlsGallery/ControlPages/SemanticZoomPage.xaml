@@ -1,4 +1,4 @@
-﻿<!--
+<!--
 //*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
@@ -19,64 +19,28 @@
     xmlns:data="using:AppUIBasics.Data"
     xmlns:wuxdata="using:Windows.UI.Xaml.Data"
     mc:Ignorable="d">
-    <Page.Resources>
-        <CollectionViewSource x:Name="cvsGroups" Source="{x:Bind Groups}" IsSourceGrouped="True" ItemsPath="Items"
-                              d:Source="{Binding Groups, Source={d:DesignData Source=/DataModel/ControlInfoData.json, Type=data:ControlInfoDataSource}}"/>
-
-        <DataTemplate x:Key="ZoomedInTemplate" x:DataType="data:ControlInfoDataItem">
-            <StackPanel Orientation="Horizontal" MinWidth="200" Margin="12,6,12,6">
-                <Image Source="{x:Bind ImagePath}" Width="36"/>
-                <StackPanel Margin="20,0,0,0">
-                    <TextBlock Text="{x:Bind Title}" Style="{StaticResource BaseTextBlockStyle}"/>
-                    <TextBlock Text="{x:Bind Subtitle}" TextWrapping="Wrap" HorizontalAlignment="Left" Width="300" Style="{StaticResource BodyTextBlockStyle}"/>
+    <StackPanel>
+        <Button HorizontalAlignment="Center" Height="188" Width="486" Click="Button_Click_1">
+            <StackPanel VerticalAlignment="Center" Orientation="Vertical" Height="184" Margin="-8,0,0,0" >
+                <TextBlock Height="56" Text=" Summary" TextWrapping="Wrap" Width="272" HorizontalAlignment="Left" FontSize="30"/>
+                <StackPanel Orientation="Horizontal" Height="118" Width="444">
+                    <Image Height="108" Width="132" Source="ms-appx:///Assets/Cal_Summary_blue.png"/>
+                    <TextBlock Height="80" VerticalAlignment="Center" Text="{Binding Textdata}" TextWrapping="Wrap" Width="240" FontSize="20"/>
                 </StackPanel>
             </StackPanel>
-        </DataTemplate>
-
-        <DataTemplate x:Key="ZoomedInGroupHeaderTemplate" x:DataType="data:ControlInfoDataGroup">
-            <TextBlock Text="{x:Bind Title}" Foreground="{ThemeResource ApplicationForegroundThemeBrush}" Style="{StaticResource SubtitleTextBlockStyle}"/>
-        </DataTemplate>
-
-        <DataTemplate x:Key="ZoomedOutTemplate" x:DataType="wuxdata:ICollectionViewGroup">
-            <TextBlock Text="{x:Bind ((data:ControlInfoDataGroup)Group).Title}" Style="{StaticResource SubtitleTextBlockStyle}" TextWrapping="Wrap"/>
-        </DataTemplate>
-    </Page.Resources>
-
-    <StackPanel>
-        <local:ControlExample HeaderText="A simple SemanticZoom" x:Name="Example1">
-            <SemanticZoom x:Name="Control1" Height="500">
-                <SemanticZoom.ZoomedInView>
-                    <GridView ItemsSource="{x:Bind cvsGroups.View}" ScrollViewer.IsHorizontalScrollChainingEnabled="False" SelectionMode="None" GotFocus="List_GotFocus"
-                        ItemTemplate="{StaticResource ZoomedInTemplate}">
-                        <GridView.GroupStyle>
-                            <GroupStyle HeaderTemplate="{StaticResource ZoomedInGroupHeaderTemplate}" />
-                        </GridView.GroupStyle>
-                    </GridView>
-                </SemanticZoom.ZoomedInView>
-
-                <SemanticZoom.ZoomedOutView>
-                    <ListView ItemsSource="{x:Bind cvsGroups.View.CollectionGroups}" SelectionMode="None" ItemTemplate="{StaticResource ZoomedOutTemplate}" GotFocus="List_GotFocus" />
-                </SemanticZoom.ZoomedOutView>
-            </SemanticZoom>
-            <local:ControlExample.Xaml>
-                <x:String xml:space="preserve">
-&lt;SemanticZoom Height="500"&gt;
-    &lt;SemanticZoom.ZoomedInView&gt;
-        &lt;GridView ItemsSource="{x:Bind cvsGroups.View}" SelectionMode="None"
-                  ItemTemplate="{StaticResource ZoomedInTemplate}"&gt;
-            &lt;GridView.GroupStyle&gt;
-                &lt;GroupStyle HeaderTemplate="{StaticResource ZoomedInGroupHeaderTemplate}" /&gt;
-            &lt;/GridView.GroupStyle&gt;
-        &lt;/GridView&gt;
-    &lt;/SemanticZoom.ZoomedInView&gt;
-
-    &lt;SemanticZoom.ZoomedOutView&gt;
-        &lt;ListView ItemsSource="{x:Bind cvsGroups.View.CollectionGroups}" HorizontalAlignment="Stretch"
-                  SelectionMode="None" ItemTemplate="{StaticResource ZoomedOutTemplate}" /&gt;
-    &lt;/SemanticZoom.ZoomedOutView&gt;
-&lt;/SemanticZoom&gt;
-                </x:String>
-            </local:ControlExample.Xaml>
-        </local:ControlExample>
+        </Button>
+        <TextBlock/>
+        <Button HorizontalAlignment="Center" Height="188" Width="486" Click="Button_Click">
+            <StackPanel Orientation="Vertical" Margin="-5,-6,0,3">
+                <TextBlock Height="64" HorizontalAlignment="Left" TextWrapping="Wrap" Width="272" FontSize="30" SelectionChanged="TextBlock_SelectionChanged_1"><Run Text="  "/><Run Text="Delete"/></TextBlock>
+                <StackPanel Orientation="Horizontal" Height="100" Width="464">
+                    <Image Height="108" VerticalAlignment="Center" Margin="0,-30,0,0" Width="132" Source="ms-appx:///Assets/Cal_Delete_blue.png" RenderTransformOrigin="0.591,0.5"/>
+                    <StackPanel Height="104" Width="300" Orientation="Vertical">
+                        <TextBlock Height="40" HorizontalAlignment="Left" TextWrapping="Wrap" Width="232" FontSize="30"><Run Text="Clear All Data"/><LineBreak/><Run/></TextBlock>
+                        <TextBlock Height="44" HorizontalAlignment="Left" Text="This Action Can Not be Undone" TextWrapping="Wrap" Width="308" FontSize="20"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Button>
     </StackPanel>
 </Page>

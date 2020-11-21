@@ -202,7 +202,7 @@ namespace AppUIBasics
         {
             foreach (var substitution in Substitutions)
             {
-                substitution.ValueChanged += OnValueChanged;
+                //substitution.ValueChanged += OnValueChanged;
             }
 
             if (MinimumUniversalAPIContract != 0 && !(ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", (ushort)MinimumUniversalAPIContract)))
@@ -227,7 +227,7 @@ namespace AppUIBasics
         }
 
         private enum SyntaxHighlightLanguage { Xml, CSharp };
-
+        /*
         private void XamlPresenter_Loaded(object sender, RoutedEventArgs e)
         {
             GenerateSyntaxHighlightedContent(sender as ContentPresenter, Xaml as string, XamlSource, Languages.Xml);
@@ -243,7 +243,7 @@ namespace AppUIBasics
             GenerateSyntaxHighlightedContent(XamlPresenter, Xaml as string, XamlSource, Languages.Xml);
             GenerateSyntaxHighlightedContent(CSharpPresenter, CSharp, CSharpSource, Languages.CSharp);
         }
-
+        
         private void GenerateSyntaxHighlightedContent(ContentPresenter presenter, string sampleString, Uri sampleUri, ILanguage highlightLanguage)
         {
             if (!string.IsNullOrEmpty(sampleString))
@@ -255,7 +255,7 @@ namespace AppUIBasics
                 FormatAndRenderSampleFromFile(sampleUri, presenter, highlightLanguage);
             }
         }
-
+        */
         private async void FormatAndRenderSampleFromFile(Uri source, ContentPresenter presenter, ILanguage highlightLanguage)
         {
             if (source != null && source.AbsolutePath.EndsWith("txt"))
@@ -354,7 +354,7 @@ namespace AppUIBasics
                 ReferenceName = "xmlName"
             });
         }
-
+        /*
         private void SampleCode_ActualThemeChanged(FrameworkElement sender, object args)
         {
             // If the theme has changed after the user has already opened the app (ie. via settings), then the new locally set theme will overwrite the colors that are set during Loaded.
@@ -367,7 +367,7 @@ namespace AppUIBasics
         {
             GenerateAllSyntaxHighlightedContent();
         }
-
+        */
         private void ScreenshotButton_Click(object sender, RoutedEventArgs e)
         {
             TakeScreenshot();
