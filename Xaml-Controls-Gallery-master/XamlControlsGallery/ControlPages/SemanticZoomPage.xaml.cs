@@ -75,11 +75,18 @@ namespace AppUIBasics.ControlPages
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             //Storage = "No data Saved yet";
-            var message = new MessageDialog("Data Delete Successfully!");
+            var message = new MessageDialog("Are you sure you want to delete the data?");
+            message.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.CommandInvokedHandler)));
+            message.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.CommandInvokedHandler)));
             await message.ShowAsync();
-            this.DataContext = new Storage_msg() { Textdata = "No data saved yet\nSince 10/20/2020" };
         }
-
+        private async void CommandInvokedHandler(IUICommand command) {
+            if (command.Label == "Yes") {
+                var message = new MessageDialog("Data Delete Successfully!");
+                await message.ShowAsync();
+                this.DataContext = new Storage_msg() { Textdata = "No data saved yet\nSince 10/20/2020" };
+            }
+        }
         private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
         {
 
