@@ -164,14 +164,14 @@ namespace AppUIBasics
 
             // Move "What's New" and "All Controls" to the top of the NavigationView
             NavigationViewControl.MenuItems.Remove(_allControlsMenuItem);
-            NavigationViewControl.MenuItems.Remove(_newControlsMenuItem);
+            //NavigationViewControl.MenuItems.Remove(_newControlsMenuItem);
             NavigationViewControl.MenuItems.Insert(0, _allControlsMenuItem);
-            NavigationViewControl.MenuItems.Insert(0, _newControlsMenuItem);
+            //NavigationViewControl.MenuItems.Insert(0, _newControlsMenuItem);
 
             // Separate the All/New items from the rest of the categories.
-            NavigationViewControl.MenuItems.Insert(2, new Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator());
+            NavigationViewControl.MenuItems.Insert(1, new Microsoft.UI.Xaml.Controls.NavigationViewItemSeparator());
 
-            _newControlsMenuItem.Loaded += OnNewControlsMenuItemLoaded;
+            //_newControlsMenuItem.Loaded += OnNewControlsMenuItemLoaded;
         }
 
         private static IconElement GetIcon(string imagePath)

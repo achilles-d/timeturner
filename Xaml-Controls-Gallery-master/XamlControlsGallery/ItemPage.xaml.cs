@@ -27,6 +27,9 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using System.Reflection;
 using AppUIBasics.Helper;
+using System;
+using System.Threading;
+using Windows.Storage;
 
 namespace AppUIBasics
 {
@@ -49,7 +52,7 @@ namespace AppUIBasics
         {
             this.InitializeComponent();
 
-            LayoutVisualStates.CurrentStateChanged += (s, e) => UpdateSeeAlsoPanelVerticalTranslationAnimation();
+            //LayoutVisualStates.CurrentStateChanged += (s, e) => UpdateSeeAlsoPanelVerticalTranslationAnimation();
             Loaded += (s,e) => SetInitialVisuals();
             this.Unloaded += this.ItemPage_Unloaded;
         }
@@ -72,7 +75,7 @@ namespace AppUIBasics
 
             _compositor = ElementCompositionPreview.GetElementVisual(this).Compositor;
 
-            UpdateSeeAlsoPanelVerticalTranslationAnimation();
+            //UpdateSeeAlsoPanelVerticalTranslationAnimation();
 
             if (UIHelper.IsScreenshotMode)
             {
@@ -88,6 +91,7 @@ namespace AppUIBasics
             }
         }
 
+        /*
         private void UpdateSeeAlsoPanelVerticalTranslationAnimation()
         {
             var isEnabled = LayoutVisualStates.CurrentState == LargeLayout;
@@ -111,6 +115,7 @@ namespace AppUIBasics
                 targetPanelVisual.StopAnimation("Translation.Y");
             }
         }
+        */
 
         private void OnToggleTheme()
         {
@@ -158,17 +163,20 @@ namespace AppUIBasics
                 string pageString = pageRoot + item.UniqueId + "Page";
                 Type pageType = Type.GetType(pageString);
 
+                
                 if (pageType != null)
                 {
                     // Pagetype is not null!
                     // So lets generate the github links and set them!
+                    /*
                     var gitHubBaseURI = "https://github.com/microsoft/Xaml-Controls-Gallery/tree/master/XamlControlsGallery/ControlPages/";
                     var pageName = pageType.Name + ".xaml";
                     PageCodeGitHubLink.NavigateUri = new Uri(gitHubBaseURI + pageName + ".cs");
                     PageMarkupGitHubLink.NavigateUri = new Uri(gitHubBaseURI + pageName);
-
+                    */
                     this.contentFrame.Navigate(pageType);
                 }
+                
 
                 NavigationRootPage.Current.NavigationView.Header = item?.Title;
             }
@@ -191,12 +199,7 @@ namespace AppUIBasics
             // We use reflection to call the OnNavigatedFrom function the user leaves this page
             // See this PR for more information: https://github.com/microsoft/Xaml-Controls-Gallery/pull/145
             Frame contentFrameAsFrame = contentFrame as Frame;
-            Page innerPage = contentFrameAsFrame.Content as Page;
-            MethodInfo dynMethod = innerPage.GetType().GetMethod("OnNavigatedFrom",
-                BindingFlags.NonPublic | BindingFlags.Instance);
-            dynMethod.Invoke(innerPage, new object[] { e });
-
-            base.OnNavigatedFrom(e);
+            
         }
 
         private void OnContentRootSizeChanged(object sender, SizeChangedEventArgs e)
@@ -209,6 +212,15 @@ namespace AppUIBasics
             }
 
             VisualStateManager.GoToState(this, targetState, false);
+        }
+
+        private void DisplayActivityChange(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (!e.Key.ToString().Contains("Number"))
+                return;
+            string numPressed = e.Key.ToString().Replace("Number", "");
+
+            this.Frame.Navigate(typeof(ControlPages.CurrentActivityPage), numPressed);
         }
     }
 }

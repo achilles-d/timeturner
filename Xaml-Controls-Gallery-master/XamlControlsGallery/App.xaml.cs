@@ -34,7 +34,7 @@ namespace AppUIBasics
     /// </summary>
     sealed partial class App : Application
     {
-        
+
         /// <summary>
         /// Initializes the singleton Application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -131,7 +131,7 @@ namespace AppUIBasics
 
             ThemeHelper.Initialize();
 
-            Type targetPageType = typeof(NewControlsPage);
+            Type targetPageType = typeof(AllControlsPage);
             string targetPageArguments = string.Empty;
 
             if (args.Kind == ActivationKind.Launch)
@@ -160,7 +160,7 @@ namespace AppUIBasics
                 switch (((ProtocolActivatedEventArgs)args).Uri?.AbsolutePath)
                 {
                     case string s when IsMatching(s, "/category/(.*)"):
-                        targetId = match.Groups[1]?.ToString();
+                        targetId = match.Groups[0]?.ToString();
                         if (ControlInfoDataSource.Instance.Groups.Any(g => g.UniqueId == targetId))
                         {
                             targetPageType = typeof(SectionPage);
@@ -168,7 +168,7 @@ namespace AppUIBasics
                         break;
 
                     case string s when IsMatching(s, "/item/(.*)"):
-                        targetId = match.Groups[1]?.ToString();
+                        targetId = match.Groups[0]?.ToString();
                         if (ControlInfoDataSource.Instance.Groups.Any(g => g.Items.Any(i => i.UniqueId == targetId)))
                         {
                             targetPageType = typeof(ItemPage);

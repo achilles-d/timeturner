@@ -3,9 +3,9 @@
   <Identity Name="Microsoft.XAMLControlsGallery.Debug" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.2.16.0" />
   <mp:PhoneIdentity PhoneProductId="1DE51B2F-78B7-4c23-9045-66DD91CDFE62" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>XAML Controls Gallery (Debug)</DisplayName>
+    <DisplayName>Timeturner (Debug)</DisplayName>
     <PublisherDisplayName>Microsoft Corporation</PublisherDisplayName>
-    <Logo>Assets\Tiles\StoreLogo-sdk.png</Logo>
+    <Logo>Assets\team9_emblem.png</Logo>
   </Properties>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.14393.0" MaxVersionTested="10.0.17763.0" />
@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XamlControlsSample.App">
-      <uap:VisualElements DisplayName="XAML Controls Gallery (Debug)" Square150x150Logo="Assets\Tiles\squaretile-sdk.png" Square44x44Logo="Assets\Tiles\SmallTile-sdk.png" Description="Xaml Controls Gallery (Debug)" BackgroundColor="transparent">
-        <uap:DefaultTile Square310x310Logo="Assets\Tiles\LargeTile.png" Wide310x150Logo="Assets\Tiles\WideTile.png" Square71x71Logo="Assets\Tiles\SmallTile.png">
+      <uap:VisualElements DisplayName="Timeturner (Debug)" Square150x150Logo="Assets\team9_emblem.png" Square44x44Logo="Assets\team9_emblem.png" Description="Timeturner debug version" BackgroundColor="transparent">
+        <uap:DefaultTile Square310x310Logo="Assets\team9_emblem.png" Wide310x150Logo="Assets\Tiles\WideTile.png" Square71x71Logo="Assets\team9_emblem.png">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />
@@ -24,11 +24,12 @@
           </uap:ShowNameOnTiles>
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\Tiles\splash-sdk.png" />
+        <uap:LockScreen BadgeLogo="Assets\team9_emblem.png" Notification="badge"/>
       </uap:VisualElements>
       <Extensions>
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="xamlcontrolsgallery">
-            <uap:DisplayName>XAML Controls Gallery (Debug)</uap:DisplayName>
+            <uap:DisplayName>Timeturner (Debug)</uap:DisplayName>
           </uap:Protocol>
         </uap:Extension>
         <uap3:Extension Category="windows.appUriHandler">

@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="AppUIBasics.ControlPages.ContentDialogPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,35 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <StackPanel>
-        <local:ControlExample x:Name="Example1" HeaderText="A basic content dialog with content.">
-            <local:ControlExample.Example>
-                <StackPanel Orientation="Horizontal">
-                    <Button x:Name="ShowDialog" Content="Show dialog" Click="ShowDialog_Click" />
-                    <TextBlock x:Name="DialogResult" Style="{StaticResource OutputTextBlockStyle}" FontFamily="Global User Interface" />
-                </StackPanel>
-            </local:ControlExample.Example>
-            <local:ControlExample.Xaml>
-                <x:String xml:space="preserve">
-&lt;ContentDialog
-        x:Class="AppUIBasics.ControlPages.ContentDialogExample"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    
-        Title="Save your work?"
-        PrimaryButtonText="Save"
-        SecondaryButtonText="Don't Save"
-        CloseButtonText="Cancel"
-        DefaultButton="Primary"&gt;
-    
-    &lt;StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch"&gt;
-        &lt;CheckBox Content="Upload your content to the cloud."/&gt;
-        &lt;TextBlock Text="Lorem ipsum dolor sit amet, adipisicing elit." 
-            TextWrapping="Wrap" /&gt;
-    &lt;/StackPanel&gt;
-    
-&lt;/ContentDialog&gt;
-                </x:String>
-            </local:ControlExample.Xaml>
-        </local:ControlExample>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <Image Source="ms-appx:///Assets/activities_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="Homework" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Current Activity" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <Image Source="ms-appx:///Assets/battery_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="40%" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Discharging" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <!-- <StackPanel Orientation="Horizontal" Spacing="0" Height="119" Width="186"> -->
+                <Image Source="ms-appx:///Assets/bluetooth_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <!-- <Image Source="ms-appx:///Assets/signal_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/> -->
+            <!-- </StackPanel> -->
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="Bluetooth" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Connected to Alex-PC" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+            <Image Source="ms-appx:///Assets/team9_emblem.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                <TextBlock Text="Firmware Version" TextWrapping="Wrap" FontSize="40" Width="326" Height="61" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="1.0.0" TextWrapping="Wrap" FontSize="26" Width="324" Height="61" SelectionChanged="TextBlock_SelectionChanged"/>
+            </StackPanel>
+        </StackPanel>
+
     </StackPanel>
 </Page>

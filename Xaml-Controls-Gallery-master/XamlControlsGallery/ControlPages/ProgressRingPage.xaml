@@ -18,26 +18,42 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
-    <StackPanel>
-        <local:ControlExample HeaderText="An indeterminate progress ring.">
-
-            <muxc:ProgressRing IsActive="{x:Bind ProgressToggle.IsOn, Mode=OneWay}" Height="60" Width="60" VerticalAlignment="Top" Margin="10,10,0,0"/>
-
-            <local:ControlExample.Options>
-                <StackPanel>
-                    <ToggleSwitch x:Name="ProgressToggle" Header="Toggle work" OffContent="Do work" OnContent="Working" IsOn="True" />
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Spacing="20" Width="549" Height="126" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <StackPanel.RenderTransform>
+                <CompositeTransform SkewX="-0.304" TranslateX="-0.395"/>
+            </StackPanel.RenderTransform>
+            <TextBlock TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Width="637" Height="126" HorizontalAlignment="Center"><Run/><LineBreak/><Run Text="Select a calendar to delete."/></TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="CalendarsPanel" Orientation="Vertical" Spacing="20" Width="444" Height="595">
+            <!--
+            <Button Height="138" Click="Button_Click">
+                <StackPanel Orientation="Horizontal" Width="452" Height="181" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+                    <Image Source="ms-appx:///Assets/outlook_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                        <TextBlock Text="Outlook" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="Button" Text="alexxu@hotmail.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center"/>
+                    </StackPanel>
                 </StackPanel>
-            </local:ControlExample.Options>
-
-            <local:ControlExample.Xaml>
-                <x:String>
-                    &lt;muxc:ProgressRing IsActive="$(IsActive)" /&gt;
-                </x:String>
-            </local:ControlExample.Xaml>
-            <local:ControlExample.Substitutions>
-                <local:ControlExampleSubstitution Key="IsActive" Value="{x:Bind ProgressToggle.IsOn, Mode=OneWay}" />
-            </local:ControlExample.Substitutions>
-
-        </local:ControlExample>
+            </Button>
+            <Button Height="138">
+            <StackPanel Orientation="Horizontal" Width="452" Height="181" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+                <Image Source="ms-appx:///Assets/google_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Google" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center"/>
+                    <TextBlock Text="alexxu@gmail.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" />
+                </StackPanel>
+            </StackPanel>
+        </Button>
+        <Button Height="138">
+            <StackPanel Orientation="Horizontal" Width="452" Height="181" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+                <Image Source="ms-appx:///Assets/apple_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="iCloud" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center"/>
+                    <TextBlock Text="alexxu@icloud.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel> 
+        </Button> -->
+        </StackPanel>
     </StackPanel>
 </Page>

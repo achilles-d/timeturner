@@ -149,14 +149,6 @@
                 VerticalScrollBarVisibility="Disabled"
                 VerticalScrollMode="Disabled">
                 <StackPanel>
-                    <ContentPresenter
-                        x:Name="XamlPresenter"
-                        Loaded="XamlPresenter_Loaded"
-                        Margin="16,20" />
-                    <ContentPresenter
-                        x:Name="CSharpPresenter"
-                        Loaded="CSharpPresenter_Loaded"
-                        Margin="16,20" />
                 </StackPanel>
             </ScrollViewer>
 

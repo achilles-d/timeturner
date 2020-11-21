@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -7,6 +7,11 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
+using System;
+using System.Net;
+using Windows.Storage;
+//using Microsoft.UI.Xaml.Controls;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,170 +26,35 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private void ZoomModeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (Control1 != null && ZoomSlider != null)
-            {
-                if (sender is ComboBox cb)
-                {
-                    switch (cb.SelectedIndex)
-                    {
-                        case 0: // Enabled
-                            Control1.ZoomMode = ZoomMode.Enabled;
-                            ZoomSlider.IsEnabled = true;
-                            break;
-                        case 1: // Disabled
-                            Control1.ZoomMode = ZoomMode.Disabled;
-                            Control1.ChangeView(null, null, (float)1.0);
-                            ZoomSlider.Value = 1;
-                            ZoomSlider.IsEnabled = false;
-                            break;
-                        default: // Disabled
-                            Control1.ZoomMode = ZoomMode.Disabled;
-                            Control1.ChangeView(null, null, (float)1.0);
-                            ZoomSlider.Value = 1;
-                            ZoomSlider.IsEnabled = false;
-                            break;
-                    }
-                }
-            }
+            var message = new MessageDialog("Sleep time: \n" +
+                "Weekly stats:13 hours\n" + "Target:50 hours");
+            await message.ShowAsync();
         }
 
-        private void ZoomSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            if (Control1 != null)
-            {
-                Control1.ChangeView(null, null, (float)e.NewValue);
-            }
-        }
-
-        private void hsmCombo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            if (Control1 != null)
-            {
-                if (sender is ComboBox cb)
-                {
-                    switch (cb.SelectedIndex)
-                    {
-                        case 0: // Auto
-                            Control1.HorizontalScrollMode = ScrollMode.Auto;
-                            break;
-                        case 1: //Enabled
-                            Control1.HorizontalScrollMode = ScrollMode.Enabled;
-                            break;
-                        case 2: // Disabled
-                            Control1.HorizontalScrollMode = ScrollMode.Disabled;
-                            break;
-                        default:
-                            Control1.HorizontalScrollMode = ScrollMode.Enabled;
-                            break;
-                    }
-                }
-            }
-        }
-
-        private void hsbvCombo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            if (Control1 != null)
-            {
-                if (sender is ComboBox cb)
-                {
-                    switch (cb.SelectedIndex)
-                    {
-                        case 0: // Auto
-                            Control1.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
-                            break;
-                        case 1: //Visible
-                            Control1.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
-                            break;
-                        case 2: // Hidden
-                            Control1.HorizontalScrollBarVisibility = ScrollBarVisibility.Hidden;
-                            break;
-                        case 3: // Disabled
-                            Control1.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
-                            break;
-                        default:
-                            Control1.HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled;
-                            break;
-                    }
-                }
-            }
-        }
-
-        private void vsmCombo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            if (Control1 != null)
-            {
-                if (sender is ComboBox cb)
-                {
-                    switch (cb.SelectedIndex)
-                    {
-                        case 0: // Auto
-                            Control1.VerticalScrollMode = ScrollMode.Auto;
-                            break;
-                        case 1: //Enabled
-                            Control1.VerticalScrollMode = ScrollMode.Enabled;
-                            break;
-                        case 2: // Disabled
-                            Control1.VerticalScrollMode = ScrollMode.Disabled;
-                            break;
-                        default:
-                            Control1.VerticalScrollMode = ScrollMode.Enabled;
-                            break;
-                    }
-                }
-            }
-        }
-
-        private void vsbvCombo_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-            if (Control1 != null)
-            {
-                if (sender is ComboBox cb)
-                {
-                    switch (cb.SelectedIndex)
-                    {
-                        case 0: // Auto
-                            Control1.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
-                            break;
-                        case 1: //Visible
-                            Control1.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
-                            break;
-                        case 2: // Hidden
-                            Control1.VerticalScrollBarVisibility = ScrollBarVisibility.Hidden;
-                            break;
-                        case 3: // Disabled
-                            Control1.VerticalScrollBarVisibility = ScrollBarVisibility.Disabled;
-                            break;
-                        default:
-                            Control1.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
-                            break;
-                    }
-                }
-            }
-        }
-
-        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            if (Grid.GetColumnSpan(Control1) == 1)
-            {
-                Control1.Width = (e.NewSize.Width / 2) - 50;
-            }
-            else
-            {
-                Control1.Width = e.NewSize.Width - 50;
-            }
 
         }
 
-        private void Control1_ViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            ZoomSlider.Value = Control1.ZoomFactor;
+            System.Threading.Thread.Sleep(100);
+            var message = new MessageDialog("Calander download successfully!");
+            await message.ShowAsync();
+            StorageFolder localfolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            using (WebClient wc = new WebClient())
+            {
+                //wc.DownloadProgressChanged += wc_DownloadProgressChanged;
+                wc.DownloadFile(new Uri("https://www.phpclasses.org/browse/download/1/file/63438/name/example.ics"), localfolder.Path+"/example.ics");
+            }
+            
         }
 
-        private void Control1_ManipulationCompleted(object sender, ManipulationCompletedRoutedEventArgs e)
+        private void progress_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
-            ZoomSlider.Value = Control1.ZoomFactor;
+            
         }
     }
 }

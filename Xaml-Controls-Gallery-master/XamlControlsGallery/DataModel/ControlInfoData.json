@@ -1,14 +1,6 @@
 {
   "Groups": [
     {
-      "UniqueId": "NewControls",
-      "Title": "What's New",
-      "Subtitle": "",
-      "ImagePath": "",
-      "Description": "",
-      "Items": []
-    },
-    {
       "UniqueId": "AllControls",
       "Title": "All Menus",
       "Subtitle": "",
@@ -20,7 +12,7 @@
       "UniqueId": "BasicInput",
       "Title": "Settings",
       "Subtitle": "",
-      "ImagePath": "",
+      "ImagePath": "ms-appx:///Assets/settings_blue.png",
       "Description": "",
       "Items": [
         {
@@ -30,57 +22,22 @@
           "ImagePath": "ms-appx:///Assets/device_sounds_blue.png",
           "Description": "The Button control provides a Click event to respond to user input from a touch, mouse, keyboard, stylus, or other input device. You can put different kinds of content in a button, such as text or an image, or you can restyle a button to give it a new look.",
           "Content": "<p>The main purpose of a <b>Button</b> is to make something happen when a user clicks it. There are two ways you can make something happen:</p><ul><li>Handle the <b>Click</b> event.</li><li>Bind the <b>Command</b> property to an ICommand implementation that describes the command logic.</li></ul><p>Buttons often have only simple string content, but you can use any object as content. You can also change the style and template to give them any look you want.</p><p>Look at the <i>ButtonPage.xaml</i> file in Visual Studio to see the custom button style and template definitions used on this page.</p>",
-          "IsUpdated": true,
-          "Docs": [
-            {
-              "Title": "Button - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
-            }
-          ],
-          "RelatedControls": [
-            "ToggleButton",
-            "RepeatButton",
-            "HyperlinkButton",
-            "AppBarButton"
-          ]
+          "IsUpdated": true
         },
         {
           "UniqueId": "DropDownButton",
           "Title": "Notifications",
           "Subtitle": "A button that displays a flyout of choices when clicked.",
-          "ImagePath": "ms-appx:///Assets/DropDownButton.png",
+          "ImagePath": "ms-appx:///Assets/notifications_blue.png",
           "Description": "A control that drops down a flyout of choices from which one can be chosen.",
           "Content": "",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "DropDownButton - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.dropdownbutton"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
-            }
-          ],
-          "RelatedControls": [
-            "SplitButton",
-            "ToggleSplitButton",
-            "ToggleButton",
-            "RepeatButton",
-            "HyperlinkButton",
-            "AppBarButton",
-            "CommandBar"
-          ]
+          "IsNew": false
         },
         {
           "UniqueId": "HyperlinkButton",
           "Title": "Activities",
           "Subtitle": "A button that appears as hyperlink text, and can navigate to a URI or handle a Click event.",
-          "ImagePath": "ms-appx:///Assets/HyperlinkButton.png",
+          "ImagePath": "ms-appx:///Assets/activities_blue.png",
           "Description": "A HyperlinkButton appears as a text hyperlink. When a user clicks it, it opens the page you specify in the NavigateUri property in the default browser. Or you can handle its Click event, typically to navigate within your app.",
           "Content": "<p>A <b>HyperlinkButton</b> looks like hyperlink text, but works like a button. You can use it in two ways:</p><ul><li>Set the <b>NavigateUri</b> property. When a user clicks it, it will automatically open the URI in the default browser.</li><li>Handle the <b>Click</b> event. This works just like the <b>Click</b> event of a standard <b>Button</b>, and can be used to navigate within your app.</li></ul><p>Each control page in this app has two sets of hyperlink buttons, one set to open documentation in Internet Explorer, and one set to navigate to related control pages in the app.</p><p>Look at the <i>HyperlinkButtonPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
           "IsNew": false,
@@ -107,14 +64,14 @@
       "UniqueId": "StatusAndInfo",
       "Title": "Calendar",
       "Subtitle": "",
-      "ImagePath": "",
+      "ImagePath": "ms-appx:///Assets/calendar_blue.png",
       "Description": "",
       "Items": [
         {
           "UniqueId": "AutomationProperties",
           "Title": "View",
           "Subtitle": "Attributes that help with writing accessible XAML.",
-          "ImagePath": "ms-appx:///Assets/Button.png",
+          "ImagePath": "ms-appx:///Assets/view_calendar_blue.png",
           "Description": "The AutomationProperties attributes provide functionality around accessible components.",
           "Content": "<p>The aim of <b>AutomationProperties</b> is to enable components that are accessible to screen readers.",
           "IsNew": true,
@@ -137,7 +94,7 @@
           "UniqueId": "ProgressBar",
           "Title": "Add",
           "Subtitle": "Shows the apps progress on a task, or that the app is performing ongoing work that doesn't block user interaction.",
-          "ImagePath": "ms-appx:///Assets/ProgressBar.png",
+          "ImagePath": "ms-appx:///Assets/add_calendar_blue.png",
           "Description": "The ProgressBar has two different visual representations:\nIndeterminate - shows that a task is ongoing, but doesn't block user interaction.\nDeterminate - shows how much progress has been made on a known amount of work.",
           "Content": "<p>Look at the <i>ProgressBarPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
           "IsNew": true,
@@ -159,7 +116,7 @@
           "UniqueId": "ProgressRing",
           "Title": "Delete",
           "Subtitle": "Shows that the app is performing ongoing work that blocks user interaction.",
-          "ImagePath": "ms-appx:///Assets/ProgressRing.png",
+          "ImagePath": "ms-appx:///Assets/delete_calendar_blue.png",
           "Description": "Use a ProgressRing to show that the app is performing ongoing work that blocks user interaction.",
           "Content": "<p>Look at the <i>ProgressRingPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
           "IsNew": true,
@@ -183,59 +140,17 @@
       "UniqueId": "DialogsAndFlyouts",
       "Title": "Device",
       "Subtitle": "",
-      "ImagePath": "",
+      "ImagePath": "ms-appx:///Assets/device_blue.png",
       "Description": "",
       "Items": [
         {
           "UniqueId": "ContentDialog",
           "Title": "Status",
           "Subtitle": "A dialog box that can be customized to contain any XAML content.",
-          "ImagePath": "ms-appx:///Assets/DefaultIcon.png",
+          "ImagePath": "ms-appx:///Assets/status_blue.png",
           "Description": "Use a ContentDialog to show relavant information or to provide a modal dialog experience that can show any XAML content.",
           "Content": "<p>Look at the <i>ContentDialog.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "ContentDialog - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentdialog"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/dialogs"
-            }
-          ],
-          "RelatedControls": [
-            "Flyout",
-            "MenuFlyout",
-            "TeachingTip",
-            "ToolTip"
-          ]
-        },
-        {
-          "UniqueId": "Flyout",
-          "Title": "Calibration",
-          "Subtitle": "Shows contextual information and enables user interaction.",
-          "ImagePath": "ms-appx:///Assets/Flyout.png",
-          "Description": "A Flyout displays lightweight UI that is either information, or requires user interaction. Unlike a dialog, a Flyout can be light dismissed by clicking or tapping off of it. Use it to collect input from the user, show more details about an item, or ask the user to confirm an action.",
-          "Content": "<p>Look at the <i>FlyoutPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "Flyout - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyout"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs"
-            }
-          ],
-          "RelatedControls": [
-            "TeachingTip",
-            "ContentDialog",
-            "MenuFlyout",
-            "Button",
-            "AppBarButton"
-          ]
+          "IsNew": false
         }
       ]
     },
@@ -243,58 +158,26 @@
       "UniqueId": "Scrolling",
       "Title": "Reports",
       "Subtitle": "",
-      "ImagePath": "",
+      "ImagePath": "ms-appx:///Assets/reports_blue.png",
       "Description": "",
       "Items": [
         {
           "UniqueId": "ScrollViewer",
           "Title": "Insights",
           "Subtitle": "A container control that lets the user pan and zoom its content.",
-          "ImagePath": "ms-appx:///Assets/ScrollViewer.png",
+          "ImagePath": "ms-appx:///Assets/insights_blue.png",
           "Description": "A ScrollViewer lets a user scroll, pan, and zoom to see content that's larger than the viewable area. Many content controls, like ListView, have ScrollViewers built into their control templates to provide automatic scrolling.",
           "Content": "<p>Look at the <i>ScrollViewerPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "ScrollViewer - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer"
-            },
-            {
-              "Title": "Guidance",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/scroll-controls"
-            }
-          ],
-          "RelatedControls": [
-            "ViewBox",
-            "Canvas",
-            "Grid",
-            "StackPanel",
-            "RelativePanel",
-            "ParallaxView"
-          ]
+          "IsNew": false
         },
         {
           "UniqueId": "SemanticZoom",
           "Title": "Data",
           "Subtitle": "Lets the user zoom between two different views of a collection, making it easier to navigate through large collections of items.",
-          "ImagePath": "ms-appx:///Assets/DefaultIcon.png",
+          "ImagePath": "ms-appx:///Assets/data_blue.png",
           "Description": "The SemanticZoom lets you show grouped data in two different ways, and is useful for quickly navigating through large sets of data.",
           "Content": "<p>Look at the <i>SemanticZoomPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
-          "IsNew": false,
-          "Docs": [
-            {
-              "Title": "SemanticZoom - API",
-              "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom"
-            },
-            {
-              "Title": "Guidelines",
-              "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/semantic-zoom"
-            }
-          ],
-          "RelatedControls": [
-            "GridView",
-            "ListView"
-          ]
+          "IsNew": false
         }
       ]
     }
