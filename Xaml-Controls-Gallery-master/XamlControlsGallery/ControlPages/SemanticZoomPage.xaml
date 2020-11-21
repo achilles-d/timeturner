@@ -20,7 +20,7 @@
     xmlns:wuxdata="using:Windows.UI.Xaml.Data"
     mc:Ignorable="d">
     <StackPanel>
-        <Button HorizontalAlignment="Center" Height="188" Width="486">
+        <Button HorizontalAlignment="Center" Height="188" Width="486" Click="Button_Click_1">
             <StackPanel VerticalAlignment="Center" Orientation="Vertical" Height="184" Margin="-8,0,0,0" >
                 <TextBlock Height="56" Text=" Summary" TextWrapping="Wrap" Width="272" HorizontalAlignment="Left" FontSize="30"/>
                 <StackPanel Orientation="Horizontal" Height="118" Width="444">
