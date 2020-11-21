@@ -128,6 +128,7 @@
     <Content Include="Assets\Cal_export_blue.png" />
     <Content Include="Assets\Cal_summary_blue.png" />
     <Content Include="Assets\data.png" />
+    <Content Include="Assets\Tiles\insights_blue.png" />
     <Content Include="ControlPages\Data\CalenderSaves.txt" />
     <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar.png" />
@@ -142,7 +143,6 @@
     <Content Include="Assets\Download_weekely_data.png" />
     <Content Include="Assets\done_loading.gif" />
     <Content Include="Assets\google_blue.png" />
-    <Content Include="Assets\insights.png" />
     <Content Include="Assets\insights_blue.png" />
     <Content Include="Assets\Insights_graph.png" />
     <Content Include="Assets\loading.gif" />
