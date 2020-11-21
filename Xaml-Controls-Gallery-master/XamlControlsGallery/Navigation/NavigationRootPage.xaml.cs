@@ -227,6 +227,7 @@ namespace AppUIBasics
                 return;
             }
 
+            /*
             if (args.IsSettingsInvoked)
             {
                 if (rootFrame.CurrentSourcePageType != typeof(SettingsPage))
@@ -234,6 +235,7 @@ namespace AppUIBasics
                     rootFrame.Navigate(typeof(SettingsPage));
                 }
             }
+            */
             else
             {
                 var invokedItem = args.InvokedItemContainer;
