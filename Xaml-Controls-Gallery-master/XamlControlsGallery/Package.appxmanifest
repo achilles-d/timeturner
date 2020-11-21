@@ -3,7 +3,7 @@
   <Identity Name="Microsoft.XAMLControlsGallery" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" Version="1.2.16.0" />
   <mp:PhoneIdentity PhoneProductId="5103861a-e76c-42b7-aea1-03093f3cf4bb" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Timeturner/DisplayName>
+    <DisplayName>Timeturner</DisplayName>
     <PublisherDisplayName>Daily Diagnosers</PublisherDisplayName>
     <Logo>Assets\Tiles\team9_emblem.png</Logo>
   </Properties>
@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XamlControlsSample.App">
-      <uap:VisualElements DisplayName="XAML Controls Gallery" Square150x150Logo="Assets\Tiles\squaretile-sdk.png" Square44x44Logo="Assets\Tiles\SmallTile-sdk.png" Description="Xaml Controls Gallery" BackgroundColor="transparent">
-        <uap:DefaultTile Square310x310Logo="Assets\Tiles\LargeTile.png" Wide310x150Logo="Assets\Tiles\WideTile.png" Square71x71Logo="Assets\Tiles\SmallTile.png">
+      <uap:VisualElements DisplayName="Timeturner" Square150x150Logo="Assets\Tiles\squaretile-sdk.png" Square44x44Logo="Assets\Tiles\SmallTile-sdk.png" Description="Timeturner" BackgroundColor="transparent">
+        <uap:DefaultTile Square310x310Logo="Assets\Tiles\LargeTile.png" Wide310x150Logo="Assets\Tiles\WideTile.png" Square71x71Logo="Assets\Tiles\SmallTile.png" ShortName="Timeturner">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
             <uap:ShowOn Tile="wide310x150Logo" />

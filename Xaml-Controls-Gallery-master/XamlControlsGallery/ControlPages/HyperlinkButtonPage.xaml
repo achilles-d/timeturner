@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel>
-        <StackPanel Orientation="Horizontal" Width="800" Height="63" >
+    <StackPanel x:Name="Frame">
+        <StackPanel Orientation="Horizontal" Width="800" Height="63">
             <TextBlock Text="Edit the activities assigned to each face of the device." FontSize="30" TextWrapping="NoWrap" Width="730" VerticalAlignment="Bottom" SelectionChanged="TextBlock_SelectionChanged"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">

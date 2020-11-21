@@ -41,15 +41,15 @@ namespace AppUIBasics.ControlPages
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
             System.Threading.Thread.Sleep(100);
-            var message = new MessageDialog("Calander download successfully!");
-            await message.ShowAsync();
+            
             StorageFolder localfolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             using (WebClient wc = new WebClient())
             {
                 //wc.DownloadProgressChanged += wc_DownloadProgressChanged;
                 wc.DownloadFile(new Uri("https://www.phpclasses.org/browse/download/1/file/63438/name/example.ics"), localfolder.Path+"/example.ics");
             }
-            
+            var message = new MessageDialog("Calender downloaded successfully to:\n" + localfolder.Path + "\\example.ics");
+            await message.ShowAsync();
         }
 
         private void progress_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)

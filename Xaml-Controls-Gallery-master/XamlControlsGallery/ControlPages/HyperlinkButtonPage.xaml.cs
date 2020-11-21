@@ -9,6 +9,7 @@
 //*********************************************************
 using System;
 using Windows.Storage;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -22,6 +23,7 @@ namespace AppUIBasics.ControlPages
         public readonly string ACTIVITY_SAVE_SUFFIX = ".txt";
         public readonly string NO_ACTIVITY_MESSAGE = "Not set";
         public readonly string ACTIVITY_MESSAGE_PREFIX = "Current activity: ";
+        private NavigationEventArgs _pastNavigationEventArgs;
         public HyperlinkButtonPage()
         {
             this.InitializeComponent();
@@ -29,6 +31,7 @@ namespace AppUIBasics.ControlPages
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
+            _pastNavigationEventArgs = e;
             for (int i = 1; i <= 12; i++)
             {
                 string activitySaveFilename = ACTIVITY_SAVE_PREFIX + i + ACTIVITY_SAVE_SUFFIX;
@@ -65,6 +68,10 @@ namespace AppUIBasics.ControlPages
                 }
                     
             }
+            var message = new MessageDialog("Activity assignments saved successfully.");
+            await message.ShowAsync();
+            // Update the existing assignments
+            OnNavigatedTo(_pastNavigationEventArgs);
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
