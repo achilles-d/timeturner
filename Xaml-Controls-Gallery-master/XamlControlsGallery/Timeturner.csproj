@@ -125,6 +125,7 @@
     <Content Include="Assets\calibration.png" />
     <Content Include="Assets\calibration_blue.png" />
     <Content Include="Assets\data.png" />
+    <Content Include="ControlPages\Data\CalenderSaves.txt" />
     <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar.png" />
     <Content Include="Assets\delete_calendar_blue.png" />
@@ -134,9 +135,11 @@
     <Content Include="Assets\device_charging_blue.png" />
     <Content Include="Assets\device_sounds.png" />
     <Content Include="Assets\device_sounds_blue.png" />
+    <Content Include="Assets\done_loading.gif" />
     <Content Include="Assets\google_blue.png" />
     <Content Include="Assets\insights.png" />
     <Content Include="Assets\insights_blue.png" />
+    <Content Include="Assets\loading.gif" />
     <Content Include="Assets\LottieLogo1.png" />
     <Content Include="Assets\notifications.png" />
     <Content Include="Assets\notifications_blue.png" />
@@ -359,6 +362,15 @@
     <Compile Include="Common\LanguageList.cs" />
     <Compile Include="Common\MenuItemTemplateSelector.cs" />
     <Compile Include="Common\ImageLoader.cs" />
+    <Compile Include="ControlPages\CalendarAddComplete.xaml.cs">
+      <DependentUpon>CalendarAddComplete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPages\CalendarLoading.xaml.cs">
+      <DependentUpon>CalendarLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlPages\CalendarInfoForm.xaml.cs">
+      <DependentUpon>CalendarInfoForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControlPages\RadioButtonsPage.xaml.cs">
       <DependentUpon>RadioButtonsPage.xaml</DependentUpon>
     </Compile>
@@ -809,6 +821,18 @@
     <Page Include="ControlPages\AnimatedVisualPlayerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlPages\CalendarAddComplete.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlPages\CalendarLoading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlPages\CalendarInfoForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="ControlPages\RadialGradientBrushPage.xaml">
       <Generator>MSBuild:Compile</Generator>

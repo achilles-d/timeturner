@@ -19,7 +19,7 @@
         mc:Ignorable="d">
     <StackPanel>
         <StackPanel Orientation="Vertical" Spacing="20" Width="700" Height="149" HorizontalAlignment="Center">
-            <TextBlock TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Width="637" Height="149" HorizontalAlignment="Center"><Run/><LineBreak/><Run Text="Select a calendar service to add."/></TextBlock>
+            <TextBlock TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Width="637" Height="149" HorizontalAlignment="Center" VerticalAlignment="Center"><Run/><LineBreak/><Run Text="Select a calendar service to add."/></TextBlock>
         </StackPanel>
         <StackPanel Orientation="Vertical" Spacing="20" Width="444" Height="595">
             <Button Height="138" Click="Button_Click">

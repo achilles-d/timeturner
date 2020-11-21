@@ -52,8 +52,8 @@ namespace AppUIBasics.ControlPages
             
             for(int i = 0; i < calendarInfoLines.Length; i++)
             {
-                if (calendarInfoLines[i].Equals(""))
-                    break;
+                if (calendarInfoLines[i].Equals("") || calendarInfoLines[i].Equals("\r") || calendarInfoLines[i].Contains("\r\r"))
+                    continue;
                 string[] calendarInfoEntry = calendarInfoLines[i].Split("|");
                 calendarPanel.Children.Add(createCalendarEntryPanel(calendarInfoEntry[0], calendarInfoEntry[1]));
             }

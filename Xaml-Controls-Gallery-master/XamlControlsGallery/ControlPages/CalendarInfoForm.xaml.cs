@@ -30,7 +30,7 @@ namespace AppUIBasics.ControlPages
             TextBox emailTextBox = this.FindName("UsernameTextBox") as TextBox;
             string email = emailTextBox.Text;
             StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
-            StorageFile calendarSaveFile = await localFolder.CreateFileAsync(CALENDAR_SAVE_FILE, CreationCollisionOption.ReplaceExisting);
+            StorageFile calendarSaveFile = await localFolder.CreateFileAsync(CALENDAR_SAVE_FILE, CreationCollisionOption.OpenIfExists);
             string calendarSave = email + "|" + _calendarService;
             await FileIO.AppendLinesAsync(calendarSaveFile, new[] { calendarSave });
 

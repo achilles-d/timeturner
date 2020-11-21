@@ -18,19 +18,25 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d">
-    <StackPanel>
-        <StackPanel Orientation="Vertical" Spacing="20" Width="444" Height="86"/>
-        <StackPanel Orientation="Vertical" Spacing="20" Width="444" Height="595">
-        <Button Height="138">
-            <StackPanel Orientation="Horizontal" Width="452" Height="181" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
-                <Image Source="ms-appx:///Assets/outlook_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
-                    <TextBlock Text="Outlook" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center"/>
-                    <TextBlock Text="alexxu@hotmail.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center"/>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Spacing="20" Width="549" Height="126" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <StackPanel.RenderTransform>
+                <CompositeTransform SkewX="-0.304" TranslateX="-0.395"/>
+            </StackPanel.RenderTransform>
+            <TextBlock TextWrapping="Wrap" FontSize="40" TextAlignment="Center" Width="637" Height="126" HorizontalAlignment="Center"><Run/><LineBreak/><Run Text="Select a calendar to delete."/></TextBlock>
+        </StackPanel>
+        <StackPanel x:Name="CalendarsPanel" Orientation="Vertical" Spacing="20" Width="444" Height="595">
+            <!--
+            <Button Height="138" Click="Button_Click">
+                <StackPanel Orientation="Horizontal" Width="452" Height="181" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
+                    <Image Source="ms-appx:///Assets/outlook_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
+                        <TextBlock Text="Outlook" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="Button" Text="alexxu@hotmail.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-        </Button>
-        <Button Height="138">
+            </Button>
+            <Button Height="138">
             <StackPanel Orientation="Horizontal" Width="452" Height="181" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="20">
                 <Image Source="ms-appx:///Assets/google_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -46,8 +52,8 @@
                     <TextBlock Text="iCloud" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center"/>
                     <TextBlock Text="alexxu@icloud.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center"/>
                 </StackPanel>
-            </StackPanel>
-        </Button>
-    </StackPanel>
+            </StackPanel> 
+        </Button> -->
+        </StackPanel>
     </StackPanel>
 </Page>
