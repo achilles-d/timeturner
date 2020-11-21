@@ -22,6 +22,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Storage;
 
 namespace AppUIBasics.ControlPages
 {
@@ -35,9 +36,21 @@ namespace AppUIBasics.ControlPages
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
+            string activitySaveFilename = "activitySave" + e.Parameter + ".txt";
+            StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            StorageFile activitySaveFile = await localFolder.CreateFileAsync(activitySaveFilename, CreationCollisionOption.OpenIfExists);
+            string activity = await FileIO.ReadTextAsync(activitySaveFile);
+
             TextBlock currentActivityTextBlock = this.FindName("CurrentActivityTextBlock") as TextBlock;
-            currentActivityTextBlock.Text = e.Parameter.ToString();
-            await Task.Delay(3000);
+            TextBlock activityNumberTextBlock = this.FindName("ActivityNumber") as TextBlock;
+            //currentActivityTextBlock.Text = e.Parameter.ToString();
+            if (activity.Equals("") || activity.Equals("\r"))
+                currentActivityTextBlock.Text = "Not set";
+            else
+                currentActivityTextBlock.Text = activity;
+            activityNumberTextBlock.Text = "Activity " + e.Parameter + ":";
+            
+            await Task.Delay(2000);
             this.Frame.GoBack();
         }
 

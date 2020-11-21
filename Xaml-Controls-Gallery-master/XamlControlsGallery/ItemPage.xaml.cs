@@ -29,6 +29,7 @@ using System.Reflection;
 using AppUIBasics.Helper;
 using System;
 using System.Threading;
+using Windows.Storage;
 
 namespace AppUIBasics
 {
@@ -215,14 +216,11 @@ namespace AppUIBasics
 
         private void DisplayActivityChange(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
         {
-            if (e.Key == Windows.System.VirtualKey.Number1)
-            {
-                this.Frame.Navigate(typeof(ControlPages.CurrentActivityPage), "Homework");
-            }
-            else if (e.Key == Windows.System.VirtualKey.Number2)
-            {
-                this.Frame.Navigate(typeof(ControlPages.CurrentActivityPage), "Tennis");
-            }
+            if (!e.Key.ToString().Contains("Number"))
+                return;
+            string numPressed = e.Key.ToString().Replace("Number", "");
+
+            this.Frame.Navigate(typeof(ControlPages.CurrentActivityPage), numPressed);
         }
     }
 }

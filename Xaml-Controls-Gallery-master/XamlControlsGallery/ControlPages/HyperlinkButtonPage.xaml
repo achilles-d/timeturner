@@ -13,54 +13,54 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="1" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity1" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="2" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity2" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="3" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity3" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="4" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity4" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="5" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity5" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="6" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity6" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="7" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity7" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="8" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity8" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="9" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity9" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="10" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity10" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="11" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity11" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
             <TextBlock Text="12" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-            <TextBox Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+            <TextBox x:Name="Activity12" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="Auto" Height="138" HorizontalAlignment="Center">
-            <Button Content="Save" FontSize="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button Click="Save_Activities" Content="Save" FontSize="30" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
     </StackPanel>
 </Page>
