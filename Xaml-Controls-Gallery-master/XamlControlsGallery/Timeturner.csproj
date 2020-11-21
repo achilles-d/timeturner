@@ -20,13 +20,14 @@
     </PackageCertificateThumbprint>
     <PackageCertificateKeyFile>testcert.pfx</PackageCertificateKeyFile>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
-    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <AppxPackageSigningEnabled>False</AppxPackageSigningEnabled>
     <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <GenerateTestArtifacts>True</GenerateTestArtifacts>
     <AppxBundle>Always</AppxBundle>
-    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <AppxPackageDir>C:\Users\achil\Desktop\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup>
     <EnableTypeInfoReflection>false</EnableTypeInfoReflection>
@@ -108,6 +109,26 @@
     <Content Include="..\SharedContent\cs\Default.rd.xml">
       <Link>Properties\Default.rd.xml</Link>
     </Content>
+    <Content Include="AppIcon.altform-lightunplated_targetsize-16.png" />
+    <Content Include="AppIcon.altform-lightunplated_targetsize-24.png" />
+    <Content Include="AppIcon.altform-lightunplated_targetsize-256.png" />
+    <Content Include="AppIcon.altform-lightunplated_targetsize-32.png" />
+    <Content Include="AppIcon.altform-lightunplated_targetsize-48.png" />
+    <Content Include="AppIcon.altform-unplated_targetsize-16.png" />
+    <Content Include="AppIcon.altform-unplated_targetsize-24.png" />
+    <Content Include="AppIcon.altform-unplated_targetsize-256.png" />
+    <Content Include="AppIcon.altform-unplated_targetsize-32.png" />
+    <Content Include="AppIcon.altform-unplated_targetsize-48.png" />
+    <Content Include="AppIcon.scale-100.png" />
+    <Content Include="AppIcon.scale-125.png" />
+    <Content Include="AppIcon.scale-150.png" />
+    <Content Include="AppIcon.scale-200.png" />
+    <Content Include="AppIcon.scale-400.png" />
+    <Content Include="AppIcon.targetsize-16.png" />
+    <Content Include="AppIcon.targetsize-24.png" />
+    <Content Include="AppIcon.targetsize-256.png" />
+    <Content Include="AppIcon.targetsize-32.png" />
+    <Content Include="AppIcon.targetsize-48.png" />
     <Content Include="Assets\activities.png" />
     <Content Include="Assets\activities_blue.png" />
     <Content Include="Assets\activities_color_dodge.png" />
@@ -115,6 +136,7 @@
     <Content Include="Assets\add_calendar.png" />
     <Content Include="Assets\add_calendar_blue.png" />
     <Content Include="Assets\apple_blue.png" />
+    <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\battery_blue.png" />
     <Content Include="Assets\bluetooth_blue.png" />
     <Content Include="Assets\break_scheduled_blue.png" />
@@ -131,9 +153,52 @@
     <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar_blue.png" />
     <Content Include="Assets\device_sounds_blue.png" />
+    <Content Include="Assets\splash-sdk.scale-100.png" />
+    <Content Include="Assets\splash-sdk.scale-125.png" />
+    <Content Include="Assets\splash-sdk.scale-150.png" />
+    <Content Include="Assets\splash-sdk.scale-200.png" />
+    <Content Include="Assets\splash-sdk.scale-400.png" />
+    <Content Include="Assets\Square310x310Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square71x71Logo.scale-400.png" />
     <Content Include="Assets\status_blue.png" />
+    <Content Include="Assets\team9_emblem.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\team9_emblem.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\team9_emblem.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\team9_emblem.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\team9_emblem.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\team9_emblem.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\team9_emblem.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\team9_emblem.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\team9_emblem.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\team9_emblem.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\team9_emblem.scale-100.png" />
+    <Content Include="Assets\team9_emblem.scale-125.png" />
+    <Content Include="Assets\team9_emblem.scale-150.png" />
+    <Content Include="Assets\team9_emblem.scale-200.png" />
+    <Content Include="Assets\team9_emblem.scale-400.png" />
+    <Content Include="Assets\team9_emblem.targetsize-16.png" />
+    <Content Include="Assets\team9_emblem.targetsize-24.png" />
+    <Content Include="Assets\team9_emblem.targetsize-256.png" />
+    <Content Include="Assets\team9_emblem.targetsize-32.png" />
+    <Content Include="Assets\team9_emblem.targetsize-48.png" />
     <Content Include="Assets\Tiles\insights_blue.png" />
+    <Content Include="Assets\Tiles\team9_emblem.scale-100.png" />
+    <Content Include="Assets\Tiles\team9_emblem.scale-125.png" />
+    <Content Include="Assets\Tiles\team9_emblem.scale-150.png" />
+    <Content Include="Assets\Tiles\team9_emblem.scale-200.png" />
+    <Content Include="Assets\Tiles\team9_emblem.scale-400.png" />
     <Content Include="Assets\view_calendar_blue.png" />
+    <Content Include="Assets\WideTile.scale-100.png" />
+    <Content Include="Assets\WideTile.scale-125.png" />
+    <Content Include="Assets\WideTile.scale-150.png" />
+    <Content Include="Assets\WideTile.scale-200.png" />
+    <Content Include="Assets\WideTile.scale-400.png" />
+    <Content Include="BadgeLogo.scale-100.png" />
+    <Content Include="BadgeLogo.scale-125.png" />
+    <Content Include="BadgeLogo.scale-150.png" />
+    <Content Include="BadgeLogo.scale-200.png" />
+    <Content Include="BadgeLogo.scale-400.png" />
     <Content Include="ControlPages\Data\CalenderSaves.txt" />
     <Content Include="Assets\delete_calendar.png" />
     <Content Include="Assets\Delete_report.png" />
@@ -227,7 +292,6 @@
     <Content Include="Assets\TabViewIcons\linux.png" />
     <Content Include="Assets\TabViewIcons\powershell.png" />
     <Content Include="Assets\TeachingTip.png" />
-    <Content Include="Assets\team9_emblem.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-100.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-125.png" />
     <Content Include="Assets\Tiles\LargeTile.scale-150.png" />
@@ -353,6 +417,36 @@
     <Content Include="ControlPagesSampleCode\Motion\ConnectedAnimation\ConnectedAnimationSimple.txt" />
     <Content Include="ControlPagesSampleCode\CommandBarFlyout\CommandBarFlyoutSample1_cs.txt" />
     <Content Include="ControlPagesSampleCode\CommandBarFlyout\CommandBarFlyoutSample1_xaml.txt" />
+    <Content Include="LargeTile.scale-100.png" />
+    <Content Include="LargeTile.scale-125.png" />
+    <Content Include="LargeTile.scale-150.png" />
+    <Content Include="LargeTile.scale-200.png" />
+    <Content Include="LargeTile.scale-400.png" />
+    <Content Include="MediumTile.scale-100.png" />
+    <Content Include="MediumTile.scale-125.png" />
+    <Content Include="MediumTile.scale-150.png" />
+    <Content Include="MediumTile.scale-200.png" />
+    <Content Include="MediumTile.scale-400.png" />
+    <Content Include="PackageLogo.scale-100.png" />
+    <Content Include="PackageLogo.scale-125.png" />
+    <Content Include="PackageLogo.scale-150.png" />
+    <Content Include="PackageLogo.scale-200.png" />
+    <Content Include="PackageLogo.scale-400.png" />
+    <Content Include="SmallTile.scale-100.png" />
+    <Content Include="SmallTile.scale-125.png" />
+    <Content Include="SmallTile.scale-150.png" />
+    <Content Include="SmallTile.scale-200.png" />
+    <Content Include="SmallTile.scale-400.png" />
+    <Content Include="SplashScreen.scale-100.png" />
+    <Content Include="SplashScreen.scale-125.png" />
+    <Content Include="SplashScreen.scale-150.png" />
+    <Content Include="SplashScreen.scale-200.png" />
+    <Content Include="SplashScreen.scale-400.png" />
+    <Content Include="WideTile.scale-100.png" />
+    <Content Include="WideTile.scale-125.png" />
+    <Content Include="WideTile.scale-150.png" />
+    <Content Include="WideTile.scale-200.png" />
+    <Content Include="WideTile.scale-400.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedVisuals\LottieLogo1.cs" />
@@ -1275,7 +1369,7 @@
       <Version>2.0.6</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.10</Version>
+      <Version>6.2.11</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
       <Version>6.1.1</Version>
