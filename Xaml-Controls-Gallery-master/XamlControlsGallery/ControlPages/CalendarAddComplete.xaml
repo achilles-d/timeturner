@@ -1,0 +1,18 @@
+
+<Page x:Class="AppUIBasics.ControlPages.CalendarAddComplete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:local="using:AppUIBasics"
+        xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d">
+    <StackPanel>
+        <StackPanel Orientation="Vertical" Spacing="20" Width="461" Height="149" HorizontalAlignment="Center">
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Spacing="40" Width="500" Height="595">
+            <Image Source="ms-appx:///Assets/done_loading.gif" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Text="Calendar added successfully." FontSize="40" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

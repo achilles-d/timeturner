@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -21,15 +21,22 @@ namespace AppUIBasics.ControlPages
 
         private void ProgressValue_ValueChanged(Microsoft.UI.Xaml.Controls.NumberBox sender, Microsoft.UI.Xaml.Controls.NumberBoxValueChangedEventArgs args)
         {
-            // Value might be NaN, which is not valid as value, thus we need to handle changes ourselves
-            if (!sender.Value.IsNaN())
-            {
-                ProgressBar2.Value = sender.Value;
-            }
-            else
-            {
-                sender.Value = 0;
-            }
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ControlPages.CalendarInfoForm), "Outlook");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ControlPages.CalendarInfoForm), "Google");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ControlPages.CalendarInfoForm), "iCloud");
         }
     }
 }

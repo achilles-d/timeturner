@@ -18,14 +18,16 @@
     xmlns:local="using:AppUIBasics"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+    <StackPanel x:Name="CalendarsPanel" Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Spacing="20" Width="444" Height="86"></StackPanel>
+        <!--<StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
             <Image Source="ms-appx:///Assets/outlook_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
                 <TextBlock Text="Outlook" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
-                <TextBlock Text="alexxu@hotmail.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock x:Name="username" Text="alexxu@hotmail.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
             </StackPanel>
         </StackPanel>
+        
         <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
             <Image Source="ms-appx:///Assets/google_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
@@ -39,8 +41,8 @@
                 <TextBlock Text="iCloud" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
                 <TextBlock Text="alexxu@icloud.com" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
             </StackPanel>
-        </StackPanel>
-        
+        </StackPanel> -->
+
     </StackPanel>
 
 </Page>
