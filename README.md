@@ -1,16 +1,9 @@
 # Timeturner
-<img src="Xaml-Controls-Gallery-master/XamlControlsGallery/Assets/team9_emblem.png" class="centerImage" width="300"/>
-<style type="text/css">
-.centerImage
-{
- text-align:center;
- display:block;
- margin-left: auto;
- margin-right: auto;
-}
-</style>
-<br>
-<p align="center">Achilles Dabrowski, Aiden Miao, Alex Xu </p>
+<p align="center">
+    <img src="Xaml-Controls-Gallery-master/XamlControlsGallery/Assets/team9_emblem.png" class="centerImage" width="300"/>
+    <br><br>
+    Achilles Dabrowski, Aiden Miao, Alex Xu 
+</p>
 <hr>
 
 ## Folders
