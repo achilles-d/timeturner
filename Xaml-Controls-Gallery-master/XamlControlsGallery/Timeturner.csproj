@@ -27,7 +27,7 @@
     <AppxBundle>Never</AppxBundle>
     <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
     <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-    <AppxPackageDir>C:\Users\achil\Documents\</AppxPackageDir>
+    <AppxPackageDir>E:\Documents\HCC\timeturner\Release\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup>
     <EnableTypeInfoReflection>false</EnableTypeInfoReflection>

@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -24,7 +24,7 @@ namespace AppUIBasics.ControlPages
         {
             if (NavigationRootPage.Current?.PageHeader != null)
             {
-                NavigationRootPage.Current.PageHeader.TeachingTip1.IsOpen = true;
+                //NavigationRootPage.Current.PageHeader.TeachingTip1.IsOpen = true;
             }
         }
 
@@ -32,7 +32,7 @@ namespace AppUIBasics.ControlPages
         {
             if (NavigationRootPage.Current?.PageHeader != null)
             {
-                NavigationRootPage.Current.PageHeader.TeachingTip2.IsOpen = true;
+                //NavigationRootPage.Current.PageHeader.TeachingTip2.IsOpen = true;
             }
         }
 
@@ -40,7 +40,7 @@ namespace AppUIBasics.ControlPages
         {
             if (NavigationRootPage.Current?.PageHeader != null)
             {
-                NavigationRootPage.Current.PageHeader.TeachingTip3.IsOpen = true;
+                //NavigationRootPage.Current.PageHeader.TeachingTip3.IsOpen = true;
             }
         }
     }

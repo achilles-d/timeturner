@@ -23,10 +23,6 @@ namespace AppUIBasics
         
         public Action ToggleThemeAction { get; set; }
 
-        public TeachingTip TeachingTip1 => ToggleThemeTeachingTip1;
-        public TeachingTip TeachingTip2 => ToggleThemeTeachingTip2;
-        public TeachingTip TeachingTip3 => ToggleThemeTeachingTip3;
-
 
         public object Title
         {
