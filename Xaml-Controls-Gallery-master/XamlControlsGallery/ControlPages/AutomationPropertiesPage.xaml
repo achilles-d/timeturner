@@ -18,8 +18,11 @@
     xmlns:local="using:AppUIBasics"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <StackPanel x:Name="CalendarsPanel" Orientation="Vertical">
-        <StackPanel Orientation="Vertical" Spacing="20" Width="444" Height="86"></StackPanel>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" Spacing="20" Width="444" Height="50"></StackPanel>
+        <StackPanel x:Name="CalendarsPanel" Orientation="Vertical" Width="Auto" Height="920">
+            
+        </StackPanel>
         <!--<StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
             <Image Source="ms-appx:///Assets/outlook_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">

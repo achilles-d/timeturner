@@ -19,7 +19,7 @@ namespace AppUIBasics.ControlPages
 
         protected override void OnNavigatedTo(Windows.UI.Xaml.Navigation.NavigationEventArgs e)
         {
-            _calendarService = e.Parameter.ToString();
+            _calendarService = (string)e.Parameter;
         }
 
         /*
@@ -32,7 +32,7 @@ namespace AppUIBasics.ControlPages
             StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             StorageFile calendarSaveFile = await localFolder.CreateFileAsync(CALENDAR_SAVE_FILE, CreationCollisionOption.OpenIfExists);
             string calendarSave = email + "|" + _calendarService;
-            await FileIO.AppendLinesAsync(calendarSaveFile, new[] { calendarSave });
+            await FileIO.AppendTextAsync(calendarSaveFile, calendarSave + "\n");
 
             this.Frame.Navigate(typeof(ControlPages.CalendarLoading));
         }

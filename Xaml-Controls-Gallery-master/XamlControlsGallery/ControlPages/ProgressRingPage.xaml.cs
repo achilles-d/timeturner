@@ -32,6 +32,7 @@ namespace AppUIBasics.ControlPages
     {
         private readonly string CALENDAR_SAVE_FILE = "calendarEntrySaves.txt";
         private NavigationEventArgs _lastEventArgs;
+        private string _emailToDelete;
         public ProgressRingPage()
         {
             this.InitializeComponent();
@@ -50,12 +51,27 @@ namespace AppUIBasics.ControlPages
             string userInfoString = await FileIO.ReadTextAsync(calendarSaveFile);
             string[] calendarInfoLines = userInfoString.Split("\n");
 
+            int numEntriesDisplayed = 0;
+
             for (int i = 0; i < calendarInfoLines.Length; i++)
             {
-                if (calendarInfoLines[i].Equals("") || calendarInfoLines[i].Equals("\r") || calendarInfoLines[i].Contains("\r\r"))
+                if (calendarInfoLines[i].Equals("") || calendarInfoLines[i].Equals("\r"))
                     continue;
                 string[] calendarInfoEntry = calendarInfoLines[i].Split("|");
                 calendarPanel.Children.Add(createCalendarEntryButton(calendarInfoEntry[0], calendarInfoEntry[1]));
+                numEntriesDisplayed++;
+            }
+
+            if(numEntriesDisplayed == 0)
+            {
+                TextBlock noEntriesTextBlock = new TextBlock();
+                noEntriesTextBlock.Text = "No calendars were found.\n Add a calendar by navigating to \"Add.\"";
+                noEntriesTextBlock.FontSize = 40;
+                noEntriesTextBlock.TextAlignment = TextAlignment.Center;
+                noEntriesTextBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                noEntriesTextBlock.VerticalAlignment = VerticalAlignment.Center;
+                noEntriesTextBlock.FontStyle = Windows.UI.Text.FontStyle.Italic;
+                calendarPanel.Children.Add(noEntriesTextBlock);
             }
 
             base.OnNavigatedTo(e);
@@ -65,27 +81,24 @@ namespace AppUIBasics.ControlPages
         {
             Button clickedButton = (Button)sender;
             TextBlock emailTextBlock = clickedButton.FindName("Email") as TextBlock;
-            string email = emailTextBlock.Text;
-            
-            ContentDialog deleteCalendarEntryDialog = new ContentDialog
-            {
-                Title = "Delete calendar?",
-                Content = "This action cannot be undone.",
-                PrimaryButtonText = "Confirm",
-                CloseButtonText = "Cancel"
-            };
+            _emailToDelete = emailTextBlock.Text;
 
-            ContentDialogResult result = await deleteCalendarEntryDialog.ShowAsync();
+            var message = new MessageDialog("Do you really want to delete " +  _emailToDelete + "?\nThis action cannot be undone.");
+            message.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.CommandInvokedHandler)));
+            message.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.CommandInvokedHandler)));
+            await message.ShowAsync();
+        }
 
-            if(result == ContentDialogResult.Primary)
+        private async void CommandInvokedHandler(IUICommand command)
+        {
+            if(command.Label.Equals("Yes"))
             {
-                deleteCalendarEntry(email);
+                deleteCalendarEntry(_emailToDelete);
                 var deleteMessage = new MessageDialog("Calendar deleted successfully.");
                 await deleteMessage.ShowAsync();
                 OnNavigatedTo(_lastEventArgs);
             }
         }
-
 
         private async void deleteCalendarEntry(string email)
         {
@@ -125,9 +138,9 @@ namespace AppUIBasics.ControlPages
 
             Image serviceIcon = new Image();
             string serviceIconPath = "ms-appx:///Assets/";
-            if (serviceType.Equals("Outlook"))
+            if (serviceType.Contains("Outlook"))
                 serviceIconPath += "outlook_blue.png";
-            else if (serviceType.Equals("Google"))
+            else if (serviceType.Contains("Google"))
                 serviceIconPath += "google_blue.png";
             else
                 serviceIconPath += "apple_blue.png";

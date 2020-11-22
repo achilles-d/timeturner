@@ -8,7 +8,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         mc:Ignorable="d">
     <StackPanel>
-        <StackPanel Orientation="Vertical" Spacing="20" Width="461" Height="149" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" Spacing="20" Width="461" Height="50" HorizontalAlignment="Center">
         </StackPanel>
         <StackPanel Orientation="Vertical" Spacing="40" Width="461" Height="595">
             <TextBlock Text="Signing in...." FontSize="40" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>

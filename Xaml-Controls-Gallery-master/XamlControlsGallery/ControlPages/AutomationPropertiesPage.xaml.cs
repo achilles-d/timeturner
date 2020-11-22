@@ -49,15 +49,29 @@ namespace AppUIBasics.ControlPages
             StorageFile calendarSaveFile = await localFolder.CreateFileAsync(CALENDAR_SAVE_FILE, CreationCollisionOption.OpenIfExists);
             string userInfoString = await FileIO.ReadTextAsync(calendarSaveFile);
             string[] calendarInfoLines = userInfoString.Split("\n");
-            
+            int numEntriesDisplayed = 0;
+
             for(int i = 0; i < calendarInfoLines.Length; i++)
             {
-                if (calendarInfoLines[i].Equals("") || calendarInfoLines[i].Equals("\r") || calendarInfoLines[i].Contains("\r\r"))
+                if (calendarInfoLines[i].Equals("") || calendarInfoLines[i].Equals("\r"))
                     continue;
                 string[] calendarInfoEntry = calendarInfoLines[i].Split("|");
                 calendarPanel.Children.Add(createCalendarEntryPanel(calendarInfoEntry[0], calendarInfoEntry[1]));
+                numEntriesDisplayed++;
             }
-        
+
+            if (numEntriesDisplayed == 0)
+            {
+                TextBlock noEntriesTextBlock = new TextBlock();
+                noEntriesTextBlock.Text = "No calendars were found.\n Add a calendar by navigating to \"Add.\"";
+                noEntriesTextBlock.FontSize = 40;
+                noEntriesTextBlock.TextAlignment = TextAlignment.Center;
+                noEntriesTextBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                noEntriesTextBlock.VerticalAlignment = VerticalAlignment.Center;
+                noEntriesTextBlock.FontStyle = Windows.UI.Text.FontStyle.Italic;
+                calendarPanel.Children.Add(noEntriesTextBlock);
+            }
+
             base.OnNavigatedTo(e);
         }
 
@@ -78,9 +92,9 @@ namespace AppUIBasics.ControlPages
 
             Image serviceIcon = new Image();
             string serviceIconPath = "ms-appx:///Assets/";
-            if (serviceType.Equals("Outlook"))
+            if (serviceType.Contains("Outlook"))
                 serviceIconPath += "outlook_blue.png";
-            else if (serviceType.Equals("Google"))
+            else if (serviceType.Contains("Google"))
                 serviceIconPath += "google_blue.png";
             else
                 serviceIconPath += "apple_blue.png";

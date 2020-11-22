@@ -27,7 +27,7 @@ namespace AppUIBasics.ControlPages
         public SemanticZoomPage()
         {
             this.InitializeComponent();
-            this.DataContext = new Storage_msg() { Textdata = "34.5MB Used on C Drive\nSince 10/20/2020"};
+            this.DataContext = new Storage_msg() { Textdata = "34.5MB used on C: (system drive)\nSince 10/20/2020"};
         }
         public IEnumerable<ControlInfoDataGroup> Groups
         {
@@ -75,14 +75,14 @@ namespace AppUIBasics.ControlPages
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             //Storage = "No data Saved yet";
-            var message = new MessageDialog("Are you sure you want to delete the data?");
+            var message = new MessageDialog("Are you sure that you want to delete all activity tracking data? This action cannot be undone.");
             message.Commands.Add(new UICommand("Yes", new UICommandInvokedHandler(this.CommandInvokedHandler)));
             message.Commands.Add(new UICommand("No", new UICommandInvokedHandler(this.CommandInvokedHandler)));
             await message.ShowAsync();
         }
         private async void CommandInvokedHandler(IUICommand command) {
             if (command.Label == "Yes") {
-                var message = new MessageDialog("Data Delete Successfully!");
+                var message = new MessageDialog("Data deleted successfully");
                 await message.ShowAsync();
                 this.DataContext = new Storage_msg() { Textdata = "No data saved yet\nSince 10/20/2020" };
             }
@@ -98,6 +98,11 @@ namespace AppUIBasics.ControlPages
         }
 
         private void TextBlock_SelectionChanged_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged_4(object sender, RoutedEventArgs e)
         {
 
         }

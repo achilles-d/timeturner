@@ -138,6 +138,7 @@
     <Content Include="Assets\apple_blue.png" />
     <Content Include="Assets\BadgeLogo.scale-400.png" />
     <Content Include="Assets\battery_blue.png" />
+    <Content Include="Assets\begin_green.png" />
     <Content Include="Assets\bluetooth_blue.png" />
     <Content Include="Assets\break_scheduled_blue.png" />
     <Content Include="Assets\calendar.png" />
@@ -153,6 +154,7 @@
     <Content Include="Assets\data_blue.png" />
     <Content Include="Assets\delete_calendar_blue.png" />
     <Content Include="Assets\device_sounds_blue.png" />
+    <Content Include="Assets\end_red.png" />
     <Content Include="Assets\splash-sdk.scale-100.png" />
     <Content Include="Assets\splash-sdk.scale-125.png" />
     <Content Include="Assets\splash-sdk.scale-150.png" />
@@ -172,6 +174,7 @@
     <Content Include="Assets\team9_emblem.altform-unplated_targetsize-256.png" />
     <Content Include="Assets\team9_emblem.altform-unplated_targetsize-32.png" />
     <Content Include="Assets\team9_emblem.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\team9_emblem.png" />
     <Content Include="Assets\team9_emblem.scale-100.png" />
     <Content Include="Assets\team9_emblem.scale-125.png" />
     <Content Include="Assets\team9_emblem.scale-150.png" />

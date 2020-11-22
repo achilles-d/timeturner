@@ -32,15 +32,15 @@
         <TextBlock/>
 
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="247" Width="486" Margin="-5,-6,0,3">
-            <TextBlock Height="64" HorizontalAlignment="Left" TextWrapping="Wrap" Width="272" FontSize="30" SelectionChanged="TextBlock_SelectionChanged_1"><Run Text="  "/><Run Text="Delete"/></TextBlock>
-            <StackPanel Orientation="Horizontal" Height="126" Width="429" Spacing="20">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="247" Width="523" Margin="-5,-6,0,3">
+            <TextBlock Height="64" HorizontalAlignment="Left" TextWrapping="Wrap" Width="266" FontSize="30" SelectionChanged="TextBlock_SelectionChanged_1"><Run Text="  "/><Run Text="Delete"/></TextBlock>
+            <StackPanel Orientation="Horizontal" Height="126" Width="449" Spacing="20">
                 <Button Click="Button_Click" Width="105">
                     <Image Height="96" VerticalAlignment="Center" HorizontalAlignment="Center" Width="132" Source="ms-appx:///Assets/Cal_Delete_blue.png" RenderTransformOrigin="0.591,0.5"/>
                 </Button>
                 <StackPanel Height="106" Width="300" Orientation="Vertical">
-                    <TextBlock Height="40" HorizontalAlignment="Left" TextWrapping="Wrap" Width="232" FontSize="30"><Run Text="Clear All Data"/><LineBreak/><Run/></TextBlock>
-                    <TextBlock Height="44" HorizontalAlignment="Left" Text="This action cannot be undone" TextWrapping="Wrap" Width="308" FontSize="20" SelectionChanged="TextBlock_SelectionChanged_3"/>
+                    <TextBlock Height="81" TextWrapping="Wrap" Width="292" FontSize="26" SelectionChanged="TextBlock_SelectionChanged_4"><Run Text="Delete all activity tracking data"/><LineBreak/><Run/></TextBlock>
+                    <TextBlock Height="44" HorizontalAlignment="Left" Text="" TextWrapping="Wrap" Width="308" FontSize="20" SelectionChanged="TextBlock_SelectionChanged_3"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
