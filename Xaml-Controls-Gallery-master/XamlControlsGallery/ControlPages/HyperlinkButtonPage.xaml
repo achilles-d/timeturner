@@ -8,10 +8,10 @@
     mc:Ignorable="d">
 
     <StackPanel x:Name="Frame">
-        <StackPanel Orientation="Horizontal" Width="800" Height="63">
-            <TextBlock Text="Edit the activities assigned to each face of the device." FontSize="30" TextWrapping="NoWrap" Width="730" VerticalAlignment="Bottom" SelectionChanged="TextBlock_SelectionChanged"/>
+        <StackPanel Orientation="Horizontal" Width="842" Height="91">
+            <TextBlock FontSize="24" TextWrapping="NoWrap" TextAlignment="Center" Width="841" VerticalAlignment="Bottom" SelectionChanged="TextBlock_SelectionChanged" Height="72"><Run Text="Enter the activity to assign to each face in the fields below."/><LineBreak/><Run Text="Changes will not be applied to faces whose fields are left blank."/></TextBlock>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Width="500" Height="63" Spacing="20">
+        <StackPanel Orientation="Horizontal" Width="500" Height="60" Spacing="20">
             <TextBlock Text="1" FontSize="30" TextWrapping="Wrap" Width="35" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
             <TextBox x:Name="Activity1" Text="" TextWrapping="Wrap" Height="36" Width="400" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </StackPanel>

@@ -35,22 +35,40 @@ namespace AppUIBasics.ControlPages
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
+            // Parse info for new and old activity
             base.OnNavigatedTo(e);
             string activitySaveFilename = "activitySave" + e.Parameter + ".txt";
             StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             StorageFile activitySaveFile = await localFolder.CreateFileAsync(activitySaveFilename, CreationCollisionOption.OpenIfExists);
-            string activity = await FileIO.ReadTextAsync(activitySaveFile);
+            string newActivity = await FileIO.ReadTextAsync(activitySaveFile);
 
-            TextBlock currentActivityTextBlock = this.FindName("CurrentActivityTextBlock") as TextBlock;
-            TextBlock activityNumberTextBlock = this.FindName("ActivityNumber") as TextBlock;
-            //currentActivityTextBlock.Text = e.Parameter.ToString();
-            if (activity.Equals("") || activity.Equals("\r"))
+            StorageFile oldActivityFile = await localFolder.CreateFileAsync("currentActivity.txt", CreationCollisionOption.OpenIfExists);
+            string oldActivityString = await FileIO.ReadTextAsync(oldActivityFile);
+            string[] oldActivityInfo = oldActivityString.Split("|");
+
+            // Write current activity info to a file for persistence
+            StorageFile currentActivityFile = await localFolder.CreateFileAsync("currentActivity.txt", CreationCollisionOption.ReplaceExisting);
+            await FileIO.WriteTextAsync(currentActivityFile, newActivity + "|" + e.Parameter);
+
+            // Display current activity
+            TextBlock currentActivityTextBlock = this.FindName("NewActivity") as TextBlock;
+            TextBlock activityNumberTextBlock = this.FindName("NewActivityNumber") as TextBlock;
+            if (newActivity.Equals("") || newActivity.Equals("\r"))
                 currentActivityTextBlock.Text = "Not set";
             else
-                currentActivityTextBlock.Text = activity;
-            activityNumberTextBlock.Text = "Activity " + e.Parameter + ":";
-            
-            await Task.Delay(2000);
+                currentActivityTextBlock.Text = newActivity;
+            activityNumberTextBlock.Text = e.Parameter + ":";
+
+            TextBlock oldActivityTextBlock = this.FindName("OldActivity") as TextBlock;
+            TextBlock oldActivityNumberTextBlock = this.FindName("OldActivityNumber") as TextBlock;
+            if (oldActivityInfo[0].Equals("") || oldActivityInfo[0].Equals("\r"))
+                oldActivityTextBlock.Text = "Not set";
+            else
+                oldActivityTextBlock.Text = oldActivityInfo[0];
+            oldActivityNumberTextBlock.Text = oldActivityInfo[1] + ":";
+
+            // Briefly block current thread before returning to previous page
+            await Task.Delay(3000);
             this.Frame.GoBack();
         }
 

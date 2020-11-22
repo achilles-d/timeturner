@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <StackPanel>
-        <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
+        <StackPanel Orientation="Horizontal" Width="658" Height="181" Spacing="20" Margin="0,0,-201,0">
             <Image Source="ms-appx:///Assets/activities_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
-                <TextBlock Text="Homework" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
-                <TextBlock Text="Current Activity" TextWrapping="Wrap" FontSize="26" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock x:Name="CurrentActivity" Text="Homework" TextWrapping="Wrap" FontSize="40" Width="503" Height="61" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Current Activity" TextWrapping="Wrap" FontSize="26" Width="504" Height="61" SelectionChanged="TextBlock_SelectionChanged"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
@@ -23,8 +23,8 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Width="452" Height="181" Spacing="20">
             <!-- <StackPanel Orientation="Horizontal" Spacing="0" Height="119" Width="186"> -->
-                <Image Source="ms-appx:///Assets/bluetooth_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <!-- <Image Source="ms-appx:///Assets/signal_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/> -->
+            <Image Source="ms-appx:///Assets/bluetooth_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <!-- <Image Source="ms-appx:///Assets/signal_blue.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Center"/> -->
             <!-- </StackPanel> -->
             <StackPanel Orientation="Vertical" Height="100" HorizontalAlignment="Center">
                 <TextBlock Text="Bluetooth" TextWrapping="Wrap" FontSize="40" Width="292" Height="61" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged"/>

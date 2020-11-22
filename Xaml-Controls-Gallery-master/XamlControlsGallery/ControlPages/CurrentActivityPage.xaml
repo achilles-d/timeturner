@@ -4,13 +4,21 @@
         xmlns:common="using:AppUIBasics.Common" xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d">
     <StackPanel>
-        <StackPanel Width="1000" Orientation="Horizontal" Height="Auto">
+        <StackPanel Width="1000" Orientation="Horizontal" Height="250">
             <StackPanel Width="75" Height="50" HorizontalAlignment="Left"></StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="925" Height="393">
-                <TextBlock x:Name="ActivityNumber" Text="Activity 12:" FontSize="60" TextWrapping="Wrap" Height="97" Width="297" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                <TextBlock x:Name="CurrentActivityTextBlock" Text="Homework" FontSize="60" FontWeight="Bold" Height="97" Width="400" Foreground="DodgerBlue" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="925" Height="200" Spacing="30">
+                <Image Source="ms-appx:///Assets/end_red.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <TextBlock x:Name="OldActivityNumber" Text="12:" FontSize="60" TextWrapping="Wrap" Height="97" Width="80" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <TextBlock x:Name="OldActivity" Text="Homework" FontSize="60" FontWeight="Normal" Height="97" Width="400" Foreground="DodgerBlue" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
             </StackPanel>
         </StackPanel>
-        
+        <StackPanel Width="1000" Orientation="Horizontal" Height="250">
+            <StackPanel Width="75" Height="50" HorizontalAlignment="Left"></StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="925" Height="200" Spacing="30">
+                <Image Source="ms-appx:///Assets/begin_green.png" Height="96" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <TextBlock x:Name="NewActivityNumber" Text="12:" FontSize="60" FontWeight="Black" TextWrapping="Wrap" Height="97" Width="80" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                <TextBlock x:Name="NewActivity" Text="Homework" FontSize="60" FontWeight="Black" Height="97" Width="700" Foreground="DodgerBlue" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            </StackPanel>
+        </StackPanel>
     </StackPanel>
 </Page>

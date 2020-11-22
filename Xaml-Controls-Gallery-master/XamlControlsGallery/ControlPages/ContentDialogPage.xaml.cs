@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,26 +23,6 @@ namespace AppUIBasics.ControlPages
             this.InitializeComponent();
         }
 
-        private async void ShowDialog_Click(object sender, RoutedEventArgs e)
-        {
-            ContentDialogExample dialog = new ContentDialogExample();
-            var result = await dialog.ShowAsync();
-            /*
-            if (result == ContentDialogResult.Primary)
-            {
-                DialogResult.Text = "User saved their work";
-            }
-            else if (result == ContentDialogResult.Secondary)
-            {
-                DialogResult.Text = "User did not save their work";
-            }
-            else
-            {
-                DialogResult.Text = "User cancelled the dialog";
-            }
-            */
-        }
-
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
 
@@ -51,5 +32,21 @@ namespace AppUIBasics.ControlPages
         {
 
         }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // Parse info for activity that has started
+            base.OnNavigatedTo(e);
+            StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            StorageFile currentActivityFile = await localFolder.CreateFileAsync("currentActivity.txt", CreationCollisionOption.OpenIfExists);
+            string activityInfoString = await FileIO.ReadTextAsync(currentActivityFile);
+            string[] activityInfo = activityInfoString.Split("|");
+            // Display current activity
+            TextBlock currentActivityTextBlock = this.FindName("CurrentActivity") as TextBlock;
+            if (activityInfo[0].Equals("") || activityInfo[0].Equals("\r"))
+                activityInfo[0] = "[Not set]";
+            currentActivityTextBlock.Text = activityInfo[0] + " (Face #" + activityInfo[1] + ")";
+        }
     }
 }
+
