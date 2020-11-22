@@ -17,11 +17,11 @@
 * Machines that are not natively running Windows 10 must run Windows 10 in a virtual environment or natively through a dual-boot configuration where both the original operating system and Windows 10 are installed on the machine.
 
 ## Files
-### The companion application was originally built on a template from Microsoft for UWP applications. For this reason, many of the pages have names that do not describe their purpose. Changing each of these names would have required a significant amount of refactoring and Visual Studio, the IDE that was used, does not always automatically rename files or symbols in all their usages across a codebase. 
+#### The companion application was originally built on a template from Microsoft for UWP applications. For this reason, many of the pages have names that do not describe their purpose. Changing each of these names would have required a significant amount of refactoring and Visual Studio, the IDE that was used, does not always automatically rename files or symbols in all of their usages across a codebase. 
+
+#### XAML files are used for scaffolding and CS files files are used for setting interaction events. This pairing can be thought of as an alternative to HTML and JavaScript.
 <br>
 
-
-### XAML files are used for scaffolding and CS files files are used for setting interaction events. This pairing can be thought of as an alternative to HTML and JavaScript.
 ### Below is a map of each file to its purpose as it appears in the application. Relative paths are given for each file.
 <br>
 
