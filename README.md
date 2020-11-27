@@ -6,6 +6,29 @@
 </p>
 <hr>
 
+## Presentations and Demos
+#### Our team, the Daily Diagnosers, created three video presentations known as "Share Outs" that provided the rest of our class with a updates on our progress on the project during the semester. All filming and editing, including drone shots, were carried out by team members.
+
+* [**Share Out 1**](https://youtu.be/L7JgCjmjY8w)
+    * Target audience interviews
+    * Needs statements
+    * How might we statements
+* [**Share Out 2**](https://youtu.be/aayAnPMMiQk)
+    * Concept video with vision of Timeturner and a visual prototype created in Figma
+    * Problem synopsis
+    * Ideation process 
+    * Storyboard of a task supported by Timeturner
+* [**Share Out 3**](https://youtu.be/GBqupgiIVwA)
+    * Recordings of demonstrations of all tasks currently supported by Timeturner, including tasks requiring the hardware device
+
+## Visual Prototypes 
+#### Two visual prototypes were created in Figma in the order listed below. Please let us know if you encounter any issues related to accessing either of the prototypes. 
+
+* [**Prototype 1**](https://www.figma.com/proto/O6oHDA3CQp5kvc2kMSR3No/Share-Out-Interfaces?node-id=0%3A1)
+    
+* [**Prototype 2**](https://www.figma.com/proto/Ema3kTEIYXqIzVAbTN7qso/Refined-UI?node-id=0%3A1)
+    * The design of the UWP application's UI was based on this prototype.
+
 ## Folders
 * **Firmware**: contains the code required to control the device itself. See /Firmware/readme.md for more information.
 * **Release**: contains a packaged version of the companion application. It has *not* been digitally signed because we do not have access to certificates from a certificate authority (CA). Self-signing the application would only have allowed the application to be able to be run on the computer on which it was signed.
